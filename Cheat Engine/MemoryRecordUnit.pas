@@ -2576,9 +2576,7 @@ var f: string;
 
     p: boolean;
 begin
-  {$ifdef windows}
-  if state and aprilfools then decreaseCheatECoinCount;
-  {$endif}
+
 
   if state=fActive then exit; //no need to execute this is it's the same state
   if processingThread<>nil then exit; //don't change the state while processing

@@ -378,7 +378,7 @@ begin
           overridefont:=TFont.create;
 
         overridefont.size:=strtoint(copy(ParamStr(i), 10, length(ParamStr(i))));
-        ff:=TFormFucker.Create;
+        ff:=TFormFontApplier.Create;
         screen.AddHandlerFormAdded(@ff.addFormEvent);
 
       except

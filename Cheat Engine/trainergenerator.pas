@@ -1287,15 +1287,7 @@ begin
 
     end;
 
-    if not cbSupportCheatEngine.checked then
-    begin
-      if adconfig<>nil then
-      begin
 
-        l.add('supportCheatEngine('+trainerform.name+', '+BoolToStr(adconfig.cbCanClose.checked,'true','false')+', '+adconfig.edtWidth.text+', '+adconfig.edtHeight.text+', '+inttostr(adconfig.adposition)+', '+QuotedStr(adconfig.ownurl)+', '+QuotedStr(adconfig.extraparam)+', '+inttostr(adconfig.percentage)+')');
-        l.add('--Thank you from Dark Byte--');
-      end;
-    end;
 
 
     if cbUseD3DHook.checked then

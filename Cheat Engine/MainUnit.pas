@@ -3018,9 +3018,6 @@ begin
   if getConnection<>nil then
     updateNetworkOptions;
 
-  {$ifdef windows}
-  if aprilfools then decreaseCheatECoinCount;
-  {$endif}
 
   DoNotOpenAssociatedTable:=false;
 
@@ -7295,6 +7292,7 @@ begin
 end;
 
 procedure TMainForm.LogoClick(Sender: TObject);
+begin
   //Referral URL removed
 end;
 
@@ -7728,10 +7726,7 @@ begin
       inc(i);
   end;
 
-  {$ifdef windows}
-  if adwindow <> nil then
-    FreeAndNil(adwindow);
-  {$endif}
+
 
   //cleanup the user forms
   if formdesigner <> nil then
@@ -10383,8 +10378,6 @@ var
   fastscanmethod: TFastscanmethod;
 begin
   {$ifdef windows}
-  if aprilfools then decreaseCheatECoinCount;
-
   QueryPerformanceCounter(scantimestart);
   {$endif}
 
@@ -10672,9 +10665,7 @@ var
   totaldiskspacefree: LARGE_INTEGER;{$endif}
   percentage: boolean;
 begin
-  {$ifdef windows}
-  if aprilfools then decreaseCheatECoinCount;
-  {$endif}
+
 
   { estimateddiskspaceneeded:=foundcount*8*3;
   GetDiskFreeSpaceEx(pchar(memscan.ScanresultFolder), diskspacefree, totaldiskspace,@totaldiskspacefree);

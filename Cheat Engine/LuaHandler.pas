@@ -31,9 +31,7 @@ uses
   {$ifdef darwin}
   ,macportdefines
   {$endif},
-  {$ifdef laztrunk}
   LazFileUtils,
-  {$endif}
   betterControls;
 
 
@@ -1382,7 +1380,7 @@ begin
             system.vtObject: luaclass_newClass(L, parameters[i].VObject); //lua_pushlightuserdata(L, pointer(parameters[i].VObject));
             system.vtClass: lua_pushlightuserdata(L, pointer(parameters[i].VClass));
             system.vtWideChar, vtPWideChar, vtVariant, vtInterface,
-              vtWideString: lua_pushstring(L, rsCheatengineIsBeingAFag);
+              vtWideString: lua_pushstring(L, rsInternalLuaStateError);
             system.vtAnsiString: lua_pushstring(L, pchar(parameters[i].VAnsiString));
             system.vtCurrency: lua_pushnumber(L, parameters[i].VCurrency^);
             system.vtInt64:
@@ -5155,76 +5153,15 @@ end;
 
 
 function supportCheatEngine(L: Plua_State): integer; cdecl;
-var
-  parameters: integer;
-  //attachwindow, hasclosebutton, width, height, position ,yoururl OPTIONAL, extraparameters OPTIONAL, percentageshown OPTIONAL
-  attachwindow: TCustomForm;
-  hasCloseButton: boolean;
-  width: integer;
-  height: integer;
-  position: integer;
-  yoururl: string;
-  extraparameters: string;
-  percentageshown: integer;
 begin
   result:=0;
-  parameters:=lua_gettop(L);
-  if parameters>=5 then
-  begin
-    attachwindow:=lua_toceuserdata(L, 1);
-    hasCloseButton:=lua_toboolean(L, 2);
-    width:=lua_tointeger(L, 3);
-    height:=lua_tointeger(L, 4);
-    position:=lua_tointeger(L, 5);
-
-    if parameters>=6 then
-      yoururl:=Lua_ToString(L, 6)
-    else
-      yoururl:='';
-
-    if parameters>=7 then
-      extraparameters:=Lua_ToString(L, 7)
-    else
-      extraparameters:='';
-
-    if parameters>=8 then
-      percentageshown:=lua_tointeger(L, 8)
-    else
-      percentageshown:=0;
-
-    lua_pop(L, lua_gettop(L));
-
-    if adwindow=nil then
-      adwindow:=TADWindow.Create2(Application, hasclosebutton);
-
-    adwindow.clientWidth:=width;
-    adwindow.clientheight:=height;
-    adwindow.show;
-    adwindow.AttachToForm(attachwindow);
-    case position of
-      0: adwindow.setPosition(akTop);
-      1: adwindow.setPosition(akRight);
-      2: adwindow.setPosition(akBottom);
-      3: adwindow.setPosition(akLeft);
-    end;
-
-    adwindow.setUserUrl(yoururl);
-    adwindow.setUserPercentage(percentageshown);
-    adwindow.optional:=extraparameters;
-
-    adwindow.LoadAdNow;
-
-
-  end else lua_pop(L, lua_gettop(L));
+  lua_pop(L, lua_gettop(L));
 end;
 
 function fuckCheatEngine(L: Plua_State): integer; cdecl;
 begin
-  lua_pop(L, lua_gettop(L));
-  if adwindow<>nil then
-    adWindow.visible:=false;
-
   result:=0;
+  lua_pop(L, lua_gettop(L));
 end;
 
 
