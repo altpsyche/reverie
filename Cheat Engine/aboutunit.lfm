@@ -426,51 +426,7 @@ object About: TAbout
       OnClick = Button1Click
       TabOrder = 0
     end
-    object Panel1: TPanel
-      AnchorSideTop.Control = GroupBox1
-      AnchorSideRight.Control = GroupBox1
-      AnchorSideRight.Side = asrBottom
-      Left = 397
-      Height = 43
-      Top = 0
-      Width = 87
-      Anchors = [akTop, akRight]
-      AutoSize = True
-      ClientHeight = 43
-      ClientWidth = 87
-      TabOrder = 1
-      object Panel2: TPanel
-        Left = 4
-        Height = 35
-        Top = 4
-        Width = 79
-        Align = alClient
-        AutoSize = True
-        BorderSpacing.Around = 3
-        ClientHeight = 35
-        ClientWidth = 79
-        TabOrder = 0
-        object Button2: TButton
-          AnchorSideLeft.Control = Panel2
-          AnchorSideTop.Control = Panel2
-          Left = 6
-          Height = 25
-          Hint = 'If you like Cheat Engine and want to contribute something to the development, join CE''s Patreon'
-          Top = 6
-          Width = 67
-          AutoSize = True
-          BorderSpacing.Left = 2
-          BorderSpacing.Top = 2
-          BorderSpacing.Right = 2
-          BorderSpacing.Around = 3
-          Caption = 'Patreon'
-          OnClick = Label4Click
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 0
-        end
-      end
-    end
+
     object Panel3: TPanel
       AnchorSideLeft.Control = GroupBox1
       AnchorSideTop.Control = Label2
@@ -613,53 +569,7 @@ object About: TAbout
         ParentColor = False
       end
     end
-    object Panel4: TPanel
-      AnchorSideLeft.Control = Image1
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Image1
-      AnchorSideTop.Side = asrCenter
-      Left = 95
-      Height = 30
-      Top = 30
-      Width = 80
-      AutoSize = True
-      BorderSpacing.Left = 20
-      BevelOuter = bvNone
-      ClientHeight = 30
-      ClientWidth = 80
-      TabOrder = 3
-      object Label8: TLabel
-        AnchorSideLeft.Control = Panel4
-        AnchorSideTop.Control = Panel4
-        Cursor = crHandPoint
-        Left = 0
-        Height = 15
-        Top = 0
-        Width = 42
-        Caption = 'Website'
-        Font.Color = clBlue
-        Font.Style = [fsUnderline]
-        ParentColor = False
-        ParentFont = False
-        OnClick = Label8Click
-      end
-      object Label9: TLabel
-        AnchorSideLeft.Control = Label8
-        AnchorSideTop.Control = Label8
-        AnchorSideTop.Side = asrBottom
-        Cursor = crHandPoint
-        Left = 0
-        Height = 15
-        Top = 15
-        Width = 80
-        Caption = 'Message Board'
-        Font.Color = clBlue
-        Font.Style = [fsUnderline]
-        ParentColor = False
-        ParentFont = False
-        OnClick = Label9Click
-      end
-    end
+
     object Label1: TLabel
       AnchorSideLeft.Control = GroupBox1
       AnchorSideLeft.Side = asrCenter

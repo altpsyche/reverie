@@ -310,7 +310,7 @@ begin
   int3:=$cc;
 
 
-  //still here so the debugger has been attached to the process or i've fucked up again
+  //still here so the debugger has been attached to the process
 
   (*
   with debuggerthread do
@@ -1843,7 +1843,7 @@ begin
                       while not continueprocess do sleep(10);
 
                       WaitForSingleObject(semaphore,infinite);
-                      running:=true; //meaning, keep your fucking hands of the registers
+                      running:=true; //do not modify the registers in this state
 
                       resumeallthreads;
 
@@ -1882,9 +1882,9 @@ begin
 
                         synchronize(updateregisters);
 
-                        running:=true; //meaning, keep your fucking hands of the registers
+                        running:=true; //do not modify the registers in this state
                         while not continueprocess do sleep(10);
-                        running:=true; //meaning, keep your fucking hands of the registers
+                        running:=true; //do not modify the registers in this state
 
                         resumeallthreads;
 
@@ -2126,7 +2126,7 @@ begin
 
                     running:=false;
                     while not continueprocess do sleep(10);
-                    running:=true; //meaning, keep your fucking hands of the registers
+                    running:=true; //do not modify the registers in this state
 
                     resumeallthreads;
 

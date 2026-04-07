@@ -40,23 +40,15 @@ type
     Image1: TImage;
     Button1: TButton;
     Label6: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Button2: TButton;
     Label10: TLabel;
     lblDBVM: TLabel;
     Panel3: TPanel;
-    Panel4: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure Button2Click(Sender: TObject);
+
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure Label4Click(Sender: TObject);
-    procedure Label8Click(Sender: TObject);
-    procedure Label9Click(Sender: TObject);
+
     procedure Image1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure lblDBVMClick(Sender: TObject; Button: TMouseButton;
@@ -98,18 +90,11 @@ begin
   action:=caFree;
 end;
 
-procedure TAbout.Button2Click(Sender: TObject);
-begin
 
-end;
 
 procedure TAbout.FormCreate(Sender: TObject);
 begin
-  if ShouldAppsUseDarkMode then
-  begin
-    label8.font.color:=clTeal;
-    label9.font.color:=clTeal;
-  end;
+
 end;
 
 procedure TAbout.FormShow(Sender: TObject);
@@ -122,20 +107,6 @@ begin
   groupbox1.Caption:=cenamewithversion;
 
 
-  i:=GetFontData(font.Handle).Height;
-  Label8.Font.Height:=i;
-  Label9.Font.Height:=i;
-
-
-  if panel4.top<label1.top+label1.height then
-  begin
-    panel4.AnchorSideTop.control:=label1;
-    panel4.AnchorSideTop.side:=asrBottom;
-  end;
-
-  if panel4.top+panel4.height>image1.Top+image1.height then
-    label10.AnchorSideTop.Control:=panel4;
-
   UpdateDBVMStatus;
 
 
@@ -143,20 +114,7 @@ begin
 
 end;
 
-procedure TAbout.Label4Click(Sender: TObject);
-begin
-  //Patreon link removed
-end;
 
-procedure TAbout.Label8Click(Sender: TObject);
-begin
-  //CE website link removed
-end;
-
-procedure TAbout.Label9Click(Sender: TObject);
-begin
-  //CE forum link removed
-end;
 
 procedure TAbout.Image1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);

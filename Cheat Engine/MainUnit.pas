@@ -599,9 +599,7 @@ type
     procedure Label3Click(Sender: TObject);
     procedure miTestAccessViolationThreadClick(Sender: TObject);
     procedure miTriggerAccessViolationClick(Sender: TObject);
-    procedure miTutorial64Click(Sender: TObject);
-    procedure MenuItem15Click(Sender: TObject);
-    procedure MenuItem16Click(Sender: TObject);
+
     procedure miClearWorkingSetClick(Sender: TObject);
     procedure miDeleteSavedScanResultsClick(Sender: TObject);
     procedure miFoundListPreferencesClick(Sender: TObject);
@@ -637,7 +635,7 @@ type
     procedure miShowCustomTypeDebugClick(Sender: TObject);
     procedure miShowPreviousValueClick(Sender: TObject);
     procedure miSnapshothandlerClick(Sender: TObject);
-    procedure miTutorialClick(Sender: TObject);
+
     procedure miChangeValueClick(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure miShowLuaScriptClick(Sender: TObject);
@@ -700,7 +698,7 @@ type
     procedure ScanTypeChange(Sender: TObject);
     procedure Value1Click(Sender: TObject);
     procedure VarTypeChange(Sender: TObject);
-    procedure LogoClick(Sender: TObject);
+
     procedure VarTypeDropDown(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure SpeedButton2Click(Sender: TObject);
@@ -1513,7 +1511,7 @@ begin
   if p then
   begin
 
-    //It's fucking time!!!!
+    //time to launch
     FreeAndNil(advancedoptions);
     FreeAndNil(actionlist1);
 
@@ -3755,24 +3753,9 @@ end;
 procedure TMainForm.miTriggerAccessViolationClick(Sender: TObject);
 begin
   triggerAV(nil);
-  showmessage('Weeee! Fuck You!');
+  showmessage('Access violation triggered.');
 end;
 
-
-procedure TMainForm.MenuItem16Click(Sender: TObject);
-{$ifdef darwin}
-var p: TProcessUTF8;
-  path: string;
-{$endif}
-begin
-  {$ifdef darwin}
-  p:=TProcessUTF8.Create(self);
-  path:=ExtractFilePath(application.ExeName)+'tutorial-aarch64.app/Contents/MacOS/tutorial-aarch64';
-  //OutputDebugString('path='+path);
-  p.Executable:=(path);
-  p.Execute;
-  {$endif}
-end;
 
 procedure TMainForm.miClearWorkingSetClick(Sender: TObject);
 begin
@@ -3786,53 +3769,9 @@ begin
   {$endif}
 end;
 
-procedure TMainForm.miTutorial64Click(Sender: TObject);
-{$ifdef darwin}
-var p: TProcessUTF8;
-  path: string;
-{$endif}
-begin
-  {$ifdef darwin}
-  p:=TProcessUTF8.Create(self);
-  path:=ExtractFilePath(application.ExeName)+'tutorial-x86_64.app/Contents/MacOS/tutorial-x86_64';
-
-  OutputDebugString('path='+path);
-  p.Executable:=(path);
-  p.Execute;
-  {$else}
-  shellexecute(0, 'open', pchar(cheatenginedir+{$ifdef altname}'rtmtutorial-x86_64.exe'{$else}'Tutorial-x86_64.exe'{$endif}), nil, nil, sw_show);
-  {$endif}
-end;
-
-procedure TMainForm.MenuItem15Click(Sender: TObject);
-var nexttut: string;
-    filename: string;
-begin
-  filename:='gtutorial-'+{$ifdef cpu32}'i386'{$else}'x86_64'{$endif}+'.exe';
-  nexttut:=ExtractFilePath(application.ExeName)+filename;
-
-  if fileexists(nexttut) then
-  begin
-    //launch the graphical tutorial
-    ShellExecute(0, PChar('open'), PChar(nexttut),PChar(''), PChar(extractfilepath(nexttut)), SW_SHOW);
-    exit;
-  end;
 
 
-  nexttut:=ExtractFileDir(application.ExeName);
 
-  if ExtractFileName(nexttut)='bin' then
-  begin
-    nexttut:=ExtractFilePath(nexttut)+'tutorial\graphical\'+filename;
-
-    if fileexists(nexttut) then
-    begin
-      //launch the graphical tutorial
-      ShellExecute(0, PChar('open'), PChar(nexttut),PChar(''), PChar(extractfilepath(nexttut)), SW_SHOW);
-      exit;
-    end;
-  end;
-end;
 
 
 
@@ -5889,37 +5828,9 @@ end;
 
 
 function TMainForm.onhelp(Command: word; Data: PtrInt; var CallHelp: boolean): boolean;
-var
-  wikipath: string;
-  wikiurl: string;
 begin
   callhelp := False;
   Result := True;
-
-  wikipath:=''; //TODO: replace with Reverie docs URL
-  wikiurl:='';
-
-  if command = HELP_CONTEXT then
-  begin
-    case data of
-      1:    wikiurl:='?';
-      2:    wikiurl:='?title=Help_File:AboutLong';
-      4:    wikiurl:='?title=Tutorials:AttachToProcess';
-      11:   wikiurl:='?title=Help_File:Table_Extras';
-      12:   wikiurl:='?title=Help_File:Memory_view';
-      19:   wikiurl:='?title=Cheat_Engine:Lua';
-      1089: wikiurl:='?title=Cheat_Engine:Auto_Assembler';
-    end;
-
-    {$ifdef windows}
-    if wikiurl='' then //no wikilink given
-      HtmlHelpA(Win32WidgetSet.AppHandle, PChar(cheatenginedir + 'cheatengine.chm'), HH_HELP_CONTEXT, Data)
-    else
-    {$endif}
-      ShellExecute(0,'open',pchar(wikipath+wikiurl),nil,nil,SW_SHOW);
-
-  end;
-
 end;
 
 
@@ -7291,10 +7202,7 @@ begin
 
 end;
 
-procedure TMainForm.LogoClick(Sender: TObject);
-begin
-  //Referral URL removed
-end;
+
 
 procedure TMainForm.VarTypeDropDown(Sender: TObject);
 begin
@@ -8495,33 +8403,21 @@ begin
   else
     firsttime := True;
 
-  if firsttime then
-  begin
-    reg.WriteBool('First Time User', False);
-
-
-    if formsettings.lbLanguages.Count>1 then
+    if firsttime then
     begin
-      i:=ShowSelectionList(self, rsLanguage, rsChooseLanguage, formSettings.lbLanguages.Items, s);
-      if i<>-1 then
+      reg.WriteBool('First Time User', False);
+
+
+      if formsettings.lbLanguages.Count>1 then
       begin
-        formSettings.lbLanguages.ItemIndex:=i;
-        formsettings.btnSelectLanguage.Click;
+        i:=ShowSelectionList(self, rsLanguage, rsChooseLanguage, formSettings.lbLanguages.Items, s);
+        if i<>-1 then
+        begin
+          formSettings.lbLanguages.ItemIndex:=i;
+          formsettings.btnSelectLanguage.Click;
+        end;
       end;
     end;
-
-
-    if messagedlg(rsTryTutorial, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-    {$ifdef darwin}
-      miTutorial64.click;
-    {$else}
-      {$ifdef cpu32}
-      miTutorial.Click;
-      {$else}
-      miTutorial64.Click;
-      {$endif}
-    {$endif}
-  end;
 
   if reg.ValueExists('Show previous value column') then
   begin
@@ -8546,65 +8442,14 @@ begin
 
 
   dontrunshow := True;
-  decodedate(now, year, month, day);
-  if (month = 7) and (day = 1) then
-    ShowMessage(strhappybirthday);
-  if (month = 1) and (day = 1) then
-  begin
-    if reg.ValueExists('ShownHappyNewYear'+inttostr(year))=false then
-    begin
-      ShowMessage(strnewyear);
-      reg.WriteBool('ShownHappyNewYear'+inttostr(year), true);
-    end;
-  end;
-  if (month = 1) and (day = 1) and (year >= 2030) then
-    ShowMessage(strFuture);
 
-  if (month = 4) and (day = 1) then
-    aprilfools := True;
-
-
-  //aprilfools:=true;
-  {$ifdef windows}
-  if aprilfools then  //what whould happen if this var is false?
-  begin
-    if copy(cenorm,1,5)='Cheat' then
-    begin
-      cenorm[3]:='E';
-      cenorm[4]:='A';
-      caption:=cenorm;
-    end;
-  end;
-  {$endif}
 
 
   //Load the table if one was suplied
   overridedebug := False;
 
-
-  if (GetSystemType < 4) {or (is64bitos)} then  //not nt or later
-  begin
-    with formsettings do
-    begin
-      cbKernelQueryMemoryRegion.Enabled := False;
-      cbKernelReadWriteProcessMemory.Enabled := False;
-      cbKernelOpenProcess.Enabled := False;
-      cbProcessWatcher.Enabled := False;
-      cbKDebug.Enabled := False;
-      cbGlobalDebug.Enabled := False;
-
-      TauntOldOsUser.Visible := True;
-    end;
-  end;
-
-
-
   vartypechange(vartype);
   adjustbringtofronttext;
-
-   {
-  if aprilfools then
-    Caption := cenorm + ' ' + rsEXPIRED + '!';}
 
   if autoattachtimer.Enabled then
     autoattachcheck
@@ -10024,16 +9869,7 @@ begin
 end;
 
 
-procedure TMainForm.miTutorialClick(Sender: TObject);
-begin
-  if not fileexists(cheatenginedir+{$ifdef altname}'rtmtutorial-i386.exe'{$else}'Tutorial-i386.exe'{$endif}) then
-  begin
-    if fileexists(cheatenginedir+{$ifdef altname}'rtmtutorial-i386.cepack'{$else}'Tutorial-i386.cepack'{$endif}) then
-      ceunpackfile(cheatenginedir+{$ifdef altname}'rtmtutorial-i386.cepack'{$else}'Tutorial-i386.cepack'{$endif}, cheatenginedir+{$ifdef altname}'rtmtutorial-i386.exe'{$else}'Tutorial-i386.exe'{$endif}, false);
-  end;
 
-  shellexecute(0, 'open', pchar(cheatenginedir+{$ifdef altname}'rtmtutorial-i386.exe'{$else}'Tutorial-i386.exe'{$endif}), nil, nil, sw_show);
-end;
 
 procedure TMainForm.miFlFindWhatAccessesClick(Sender: TObject);
 var

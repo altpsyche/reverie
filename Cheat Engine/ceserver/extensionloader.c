@@ -628,7 +628,7 @@ int loadExtension(PProcessData p, char *path)
       {
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+0, returnaddress)!=0)
         {
-          debug_log("Fuck\n");
+          debug_log("step1 failed\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -636,7 +636,7 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+4, newregs.rsp+0x18)!=0)
         {
-          debug_log("Fuck2\n");
+          debug_log("step2 failed\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -644,7 +644,7 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+8, RTLD_NOW)!=0)
         {
-          debug_log("Fuck3\n");
+          debug_log("step3 failed\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -654,7 +654,7 @@ int loadExtension(PProcessData p, char *path)
         {
           if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+12, p->dlopencaller)!=0)
           {
-            debug_log("Fuck4\n");
+            debug_log("step4 failed\n");
             safe_ptrace(PTRACE_DETACH, pid,0,0);
 
             return FALSE;
@@ -679,14 +679,14 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp-8, returnaddress)!=0)
         {
-          debug_log("Fuck\n");
+          debug_log("step1 failed\n");
           resumeProcess(p, pid);
           return FALSE;
         }
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+8, returnaddress)!=0)
         {
-          debug_log("Fuck\n");
+          debug_log("step1 failed\n");
           resumeProcess(p, pid);
           return FALSE;
         }
@@ -747,7 +747,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+0, returnaddress)!=0)
     {
-      debug_log("Fuck\n");
+      debug_log("step1 failed\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -755,7 +755,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+4, newregs.esp+16)!=0)
     {
-      debug_log("Fuck2\n");
+      debug_log("step2 failed\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -763,7 +763,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+8, RTLD_NOW)!=0)
     {
-      debug_log("Fuck3\n");
+      debug_log("step3 failed\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -773,7 +773,7 @@ int loadExtension(PProcessData p, char *path)
     {
       if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+12, p->dlopencaller)!=0)
       {
-        debug_log("Fuck4\n");
+        debug_log("step4 failed\n");
         safe_ptrace(PTRACE_DETACH, pid,0,0);
 
         return FALSE;
@@ -1587,7 +1587,7 @@ int loadCEServerExtension(HANDLE hProcess)
 
         if ((p->dlopencaller==0) && (Module32First(ths, &me)))
         {
-          debug_log("no /system. fuck it! picking the first module I see: \n");
+          debug_log("no /system found, falling back to the first available module: \n");
           debug_log("found: ");
           debug_log(me.moduleName);
           debug_log("\n");

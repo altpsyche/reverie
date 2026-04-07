@@ -440,18 +440,18 @@ resourcestring
   rsInvalidMsrAddress = 'Invalid MSR address:';
   rsMsrsAreUnavailable = 'msrs are unavailable';
   rsCouldNotLaunchDbvm = 'Could not launch DBVM: The Intel-VT feature has been disabled in your BIOS';
-  rsYouAreMissingTheDriver = 'You are missing the driver. Try reinstalling '+strCheatEngine+', and try to disable your anti-virus before doing so.';
+  rsYouAreMissingTheDriver = 'The required driver is missing. Please ensure '+strCheatEngine+' is correctly installed and that your security software is not blocking its components.';
   rsDriverError = 'Driver error';
   rsFailureToConfigureTheDriver = 'Failure to configure the driver';
   rsFailureToConfigureTheUltimapDriver = 'Failure to configure the ultimap driver';
   rsPleaseRebootAndPressF8DuringBoot = 'The driver failed to load due to signing issues. If you have secure boot enabled in your BIOS, set it to "Other OS" or disable it. Alternatively, boot with driver signing policy disabled, or sign the driver yourself';
   rsDbk32Error = 'DBK32 error';
-  rsTheServiceCouldntGetOpenedUltimap = 'The ultimap service couldn''t get opened and also couldn''t get created.  (No admin rights?)';
-  rsTheServiceCouldntGetOpened = 'The service couldn''t get opened and also couldn''t get created.'+' Check if you have the needed rights to create a service, or call your system admin (Who''ll probably beat you up for even trying this). Until this is fixed you won''t be able to make use of the enhancements the driver gives you';
-  rsTheDriverCouldntBeOpened = 'The driver couldn''t be opened! It''s not loaded or not responding. Luckely you are running dbvm so it''s not a total waste. Do you wish to force load the driver?';
-  rsTheDriverCouldntBeOpenedTryAgain = 'The driver couldn''t be opened! It''s not loaded or not responding. I recommend to reboot your system and try again';
+  rsTheServiceCouldntGetOpenedUltimap = 'The ultimap service could not be opened or created. Please ensure you have administrative privileges.';
+  rsTheServiceCouldntGetOpened = 'The service could not be opened or created. Please verify your administrative privileges. Without this service, certain advanced features will be unavailable.';
+  rsTheDriverCouldntBeOpened = 'The driver could not be opened. It may not be loaded or is unresponsive. DBVM is active, so some functionality remains. Would you like to attempt to force-load the driver?';
+  rsTheDriverCouldntBeOpenedTryAgain = 'The driver could not be opened. It may not be loaded or is unresponsive. Please restart your system and try again.';
   rsTheDriverThatIsCurrentlyLoaded = 'The driver that is currently loaded belongs to a different version of '+strCheatEngine+'. Please unload this driver or reboot.';
-  rsTheDriverFailedToSuccessfullyInitialize = 'The driver failed to successfully initialize. Some functions may not completely work';
+  rsTheDriverFailedToSuccessfullyInitialize = 'The driver failed to initialize correctly. Some advanced features may be unavailable.';
   rsAPCRules = 'APC rules';
   rsPleaseRunThe64BitVersionOfCE = 'Please run the 64-bit version of '+strCheatEngine;
   rsDBKError = 'DBK Error';
@@ -3412,10 +3412,7 @@ begin
               begin
                 if dword(le)=$800B010C then
                 begin
-                  if messagebox(0, PChar(rsDBKBlockedDueToVulnerableDriverBlocklist), pchar(rsDbk32Error), MB_ICONERROR or MB_YESNO)=IDYES then
-                  begin
-                    //dbkerror URL removed - driver blocklist info now handled locally
-                  end;
+                  messagebox(0, PChar(rsDBKBlockedDueToVulnerableDriverBlocklist), pchar(rsDbk32Error), MB_ICONERROR or MB_OK);
                 end
                 else
                   messagebox(0,PChar('Failure starting dbk:'+inttostr(le)),PChar(rsDbk32Error),MB_ICONERROR or mb_ok);

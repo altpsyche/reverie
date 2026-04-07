@@ -271,8 +271,8 @@ resourcestring
     +'can enable it.'#13#10'Do you wish to enable No-Execute support for this process?';
   rsProcessSucksNoDEPSupport = 'Ooops, looks like the process does not support'
     +' No Execute';
-  rsFailedDEPPermanently = 'Failed enabling No Execute AND blocked it from '
-    +'every changing. Fuck';
+  rsFailedDEPPermanently = 'Failed enabling No Execute and the policy is now '
+    +'permanently locked.';
   rsFailedDEP = 'Failed enabling No Execute';
   rsDepSettingTimeout = 'Timeout while trying to set DEP policy. Continue with'
     +' the breakpoint?';
@@ -2159,7 +2159,7 @@ begin
         if not fetchediptlog then
         begin
           inc(loopcount);
-          if loopcount>10 then exit; //fuck it, something is broken
+          if loopcount>10 then exit; //bail out, something is broken
         end;
       end;
     end;

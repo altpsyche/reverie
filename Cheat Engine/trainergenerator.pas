@@ -133,7 +133,6 @@ type
   private
     { private declarations }
     popupkeys: TKeycombo;
-    restoretimer: ttimer;
 
 
     playbitmap: TBitmap;

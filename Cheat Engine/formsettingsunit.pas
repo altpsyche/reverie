@@ -219,7 +219,7 @@ type
     Assembler: TTabSheet;
     cbHandleBreakpoints: TCheckBox;
     Extra: TTabSheet;
-    TauntOldOsUser: TLabel;
+
     GroupBox3: TGroupBox;
     cbKernelQueryMemoryRegion: TCheckBox;
     cbKernelReadWriteProcessMemory: TCheckBox;
@@ -1999,8 +1999,7 @@ begin
   if is64bitos then
   begin
 
-    {TauntOldOsUser.Visible:=true;
-    TauntOldOsUser.Caption:=rsPleaseBootWithUnsignedDriversAllowedF8DuringBootOr;   }
+
 
 
 

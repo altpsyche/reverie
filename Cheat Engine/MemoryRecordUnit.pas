@@ -3299,7 +3299,7 @@ begin
                     begin
                       if (vartype<>vtCustom) or (fcustomtype.scriptUsesFloat) then
                       begin
-                        //handle it as an actual float(why the fuck would anyone put a float as hex...)
+                        //handle it as an actual float (unusual: float stored as hex)
                         try
                           v64:=strtoint64(temps);
                           buf:=@v64;

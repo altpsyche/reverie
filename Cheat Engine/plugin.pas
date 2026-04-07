@@ -1366,7 +1366,7 @@ var e: texportedfunctions;
     enet: TExportedFunctionsDotNetV1 absolute e;
     x: boolean;
 begin
-  e:=exportedfunctions;  //save it to prevent plugins from fucking it up
+  e:=exportedfunctions;  //save it to prevent plugins from corrupting it
 
 
   case plugins[pluginid].pluginversion of

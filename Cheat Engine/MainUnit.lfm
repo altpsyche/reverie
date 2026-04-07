@@ -823,7 +823,6 @@ object MainForm: TMainForm
         AntialiasingMode = amOn
         Anchors = [akTop, akRight]
         Center = True
-        OnClick = LogoClick
         OnMouseDown = LogoMouseDown
         Picture.Data = {
           07544269746D617076260000424D762600000000000036000000280000002F00
@@ -2664,23 +2663,22 @@ object MainForm: TMainForm
       object miTutorial: TMenuItem
         Caption = 'Cheat Engine Tutorial'
         ImageIndex = 23
-        OnClick = miTutorialClick
+        Visible = False
       end
       object miTutorial64: TMenuItem
         Caption = 'Cheat Engine Tutorial (x86_64)'
         ImageIndex = 24
-        OnClick = miTutorial64Click
+        Visible = False
       end
       object MenuItem16: TMenuItem
         Caption = 'Cheat Engine Tutorial (AArch64)'
         ImageIndex = 24
         Visible = False
-        OnClick = MenuItem16Click
       end
       object MenuItem15: TMenuItem
         Caption = 'Cheat Engine Tutorial Games'
         ImageIndex = 26
-        OnClick = MenuItem15Click
+        Visible = False
       end
       object miEnableLCLDebug: TMenuItem
         AutoCheck = True

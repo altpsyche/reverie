@@ -1327,7 +1327,7 @@ begin
     begin
       if usedmiFindWhatAccesses=false then
       begin
-        MessageDlg('cr.formChangedAddresses is not nil but the function was never used. Fuck! cr.formChangedAddresses='+inttohex(ptruint(cr.formChangedAddresses),8), mtError,[mbok],0);
+        MessageDlg('Internal error: cr.formChangedAddresses is set but was never used. cr.formChangedAddresses='+inttohex(ptruint(cr.formChangedAddresses),8), mtError,[mbok],0);
         exit;
       end;
       cr.formChangedAddresses.Close;

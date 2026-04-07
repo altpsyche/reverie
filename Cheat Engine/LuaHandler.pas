@@ -5152,19 +5152,6 @@ end;
 
 
 
-function supportCheatEngine(L: Plua_State): integer; cdecl;
-begin
-  result:=0;
-  lua_pop(L, lua_gettop(L));
-end;
-
-function fuckCheatEngine(L: Plua_State): integer; cdecl;
-begin
-  result:=0;
-  lua_pop(L, lua_gettop(L));
-end;
-
-
 function dbk_initialize(L: Plua_State): integer; cdecl;
 var
   state,x: BOOL;
@@ -12917,7 +12904,7 @@ begin
       codesize:=lua_tointeger(L,2)
     else
     begin
-      //no codesize given, calculate the number of bytes needed to put a 5 byte jmp in here. (make sure to use 3th alloc param, bitch please if you don't)
+      //no codesize given, calculate the number of bytes needed to put a 5 byte jmp in here. (use the 3rd alloc param to override)
       codesize:=0;
       ca:=address;
 
@@ -16565,11 +16552,6 @@ begin
 
     InitializeMemscan;
     InitializeFoundlist;
-
-
-    Lua_register(L, 'supportCheatEngine', supportCheatEngine);
-    Lua_register(L, 'fuckCheatEngine', fuckCheatEngine);
-
 
 
     lua_register(L, 'inheritsFromObject', inheritsFromObject);

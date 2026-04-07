@@ -2398,7 +2398,7 @@ var
 
 
 resourcestring
-  rsfucked='Something is really messed up on your computer! You don''t seem to have a kernel!!!!';
+  rsKernelMissing='Failed to load kernel32.dll. The Windows kernel could not be located on this system.';
 
 {$endif}
 
@@ -2425,7 +2425,7 @@ initialization
 
 
   WindowsKernel:=LoadLibrary('Kernel32.dll'); //there is no kernel33.dll
-  if WindowsKernel=0 then Raise Exception.create(rsFucked);
+  if WindowsKernel=0 then Raise Exception.create(rsKernelMissing);
 
   NTDLLHandle:=LoadLibrary('ntdll.dll');
 

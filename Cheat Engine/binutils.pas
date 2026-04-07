@@ -953,7 +953,7 @@ function TBinUtils.compile(script: tstringlist): boolean;
 
 //On hold. This needs to be rewritten to be dynamic instead of static and then fill in the relocation table and importtable  (my ld can't link above 0x100000000)
 
-//fuck it, just compile a dll and then force load the dll by parsing the import table
+//fallback: compile a dll and then force load the dll by parsing the import table
 var
   p: TProcess;
   inputfile: string='';

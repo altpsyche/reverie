@@ -153,7 +153,7 @@ begin
   begin
     triangleheight:=defaultHeight div 4;
 
-    fCanvas.Brush.Style:=bsSolid; //should be the default, but in case something fucked with it (not in the planning, never intended, so even if someone did do it, I'll undo it)
+    fCanvas.Brush.Style:=bsSolid; //should be the default, but force it in case something else changed it
     fCanvas.Brush.Color:=fjumpcolor;
     fCanvas.Polygon([point(fheaders.items[2].Left-triangleheight,yposition-triangleheight),point(fheaders.items[2].Left,yposition),point(fheaders.items[2].Left-triangleheight,yposition+triangleheight)]);
   end;
