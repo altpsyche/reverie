@@ -401,7 +401,7 @@ uses
   aboutunit, MainUnit, MainUnit2, frmExcludeHideUnit, ModuleSafetyUnit,
   frmProcessWatcherUnit, CustomTypeHandler, processlist, commonTypeDefs,
   frmEditHistoryUnit, Globals, fontSaveLoadRegistry, CETranslator,
-  MemoryBrowserFormUnit, DBK32functions, feces, UnexpectedExceptionsHelper,
+  MemoryBrowserFormUnit, DBK32functions, tablesignature, UnexpectedExceptionsHelper,
   cpuidUnit, DPIHelper, symbolsync, ProcessHandlerUnit, GDBServerDebuggerInterface,
   DebuggerInterfaceAPIWrapper;
 

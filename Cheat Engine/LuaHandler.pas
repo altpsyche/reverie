@@ -108,7 +108,7 @@ uses autoassembler, MainUnit, MainUnit2, LuaClass, frmluaengineunit, plugin, plu
   formsettingsunit, MemoryRecordUnit, debuggertypedefinitions, symbolhandler,
   symbolhandlerstructs, types,
   frmautoinjectunit, simpleaobscanner, addresslist, memscan, foundlisthelper,
-  cesupport, DBK32functions, sharedMemory, disassemblerComments, disassembler,
+  DBK32functions, sharedMemory, disassemblerComments, disassembler,
   LuaCanvas, LuaPen, LuaFont, LuaBrush, LuaPicture, LuaMenu, LuaDebug, LuaThread,
   LuaGraphic, LuaProgressBar, LuaOldD3DHook, LuaWinControl, LuaMemoryRecord,
   LuaForm, MemoryBrowserFormUnit, disassemblerviewunit, hexviewunit,
@@ -132,7 +132,7 @@ uses autoassembler, MainUnit, MainUnit2, LuaClass, frmluaengineunit, plugin, plu
   LuaDiagram, frmUltimap2Unit, frmcodefilterunit, BreakpointTypeDef, LuaSyntax,
   LazLogger, LuaSynedit, LuaRIPRelativeScanner, LuaCustomImageList ,ColorBox,
   rttihelper, LuaDotNetPipe, LuaRemoteExecutor, windows7taskbar, debugeventhandler,
-  tcclib, dotnethost, CSharpCompiler, LuaCECustomButton, feces, process,
+  tcclib, dotnethost, CSharpCompiler, LuaCECustomButton, tablesignature, process,
   networkInterface, networkInterfaceApi, LuaVirtualStringTree, userbytedisassembler,
   parsers, LuaNetworkInterface, symbolsync, GDBServerDebuggerInterface, contexthandler;
 
@@ -142,7 +142,7 @@ resourcestring
   rsLUA_DoScriptWasNotCalledRomTheMainThread = 'LUA_DoScript was not called '
     +'from the main thread';
   rsUndefinedLuaError = 'Undefined lua error';
-  rsCheatengineIsBeingAFag = 'Cheatengine is being a fag';
+  rsInternalLuaStateError = 'Internal Lua state error';
 
   rsInvalidFloat = 'Invalid floating point string:%s';
   rsInvalidInt = 'Invalid integer:%s';

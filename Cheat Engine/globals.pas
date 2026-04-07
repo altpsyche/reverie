@@ -140,8 +140,6 @@ var
   ownprocesshandle: THandle;
   stealthhook: thandle;
 
-  //windows version data
-  iswin2kplus: boolean;
   scanpriority: TThreadPriority;
 
   useAPCtoInjectDLL: boolean=false;

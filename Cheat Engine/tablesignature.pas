@@ -1,5 +1,5 @@
-unit feces;
-//friends endorsing cheat engine system
+unit tablesignature;
+//Table signing and signature verification system (ECDSA P-521 + SHA-512)
 
 {$mode objfpc}{$H+}
 
@@ -86,21 +86,7 @@ var
 
   _cansignstate: TCanSign=csUnknown;
 
-var rv: dword=0;
-function EncodePointerNI(p: pointer):pointer; stdcall; //not implemented (unpatched XP)
-begin
-  if rv=0 then
-    rv:=1+random($fffffffd);
 
-  result:=pointer(ptruint(p) xor rv);
-end;
-
-function DecodePointerNI(p: pointer):pointer; stdcall;
-begin
-  if rv=0 then exit(p);
-
-  result:=pointer(ptruint(p) xor rv);
-end;
 
 
 
@@ -777,17 +763,9 @@ begin
 
 end;
 
-var k32: HMODULE;
 initialization
-  k32:=GetModuleHandle('kernel32.dll');
-  pointer(encodepointer):=GetProcAddress(k32,'EncodePointer');
-  pointer(decodepointer):=GetProcAddress(k32,'DecodePointer');
-
-  if not assigned(encodepointer) then
-    (encodepointer):=@EncodePointerNI;
-
-  if not assigned(decodepointer) then
-    (decodepointer):=@DecodePointerNI;
+  pointer(encodepointer):=GetProcAddress(GetModuleHandle('kernel32.dll'),'EncodePointer');
+  pointer(decodepointer):=GetProcAddress(GetModuleHandle('kernel32.dll'),'DecodePointer');
 
 {$endif}
 

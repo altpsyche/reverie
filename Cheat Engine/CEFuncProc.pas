@@ -4005,7 +4005,7 @@ initialization
   setlength(donthidelist,0);
   allwindowsareback:=true;
   stealthhook:=0;
-  iswin2kplus:=GetSystemType>=5;
+  GetSystemType; //cache system type
 
 
   {$IFDEF windows}

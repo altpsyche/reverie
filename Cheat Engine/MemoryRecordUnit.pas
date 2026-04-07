@@ -461,7 +461,7 @@ implementation
 uses processhandlerunit, Parsers;
 {$else}
 uses mainunit, addresslist, formsettingsunit, LuaHandler, lua, lauxlib, lualib, Contnrs,
-  processhandlerunit, Parsers, {$ifdef windows}winsapi,{$endif}autoassembler, globals{$ifdef windows}, cheatecoins{$endif};
+  processhandlerunit, Parsers, {$ifdef windows}winsapi,{$endif}autoassembler, globals;
 {$endif}
 
 

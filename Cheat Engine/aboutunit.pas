@@ -138,17 +138,6 @@ begin
 
   UpdateDBVMStatus;
 
-  {$ifdef altname}
-  rs := TResourceStream.Create(HInstance, 'IMAGES_ALT_CELOGO', RT_RCDATA);
-  logopic:=TPicture.Create;
-  logopic.LoadFromStreamWithFileExt(rs,'.PNG');
-  image1.Picture:=logopic;
-  image1.Stretch:=true;
-
-
-  logopic.free;
-  freeandnil(rs);
-  {$endif}
 
 
 
@@ -156,17 +145,17 @@ end;
 
 procedure TAbout.Label4Click(Sender: TObject);
 begin
-  shellexecute(0,'open',pchar('https://www.patreon.com/cheatengine'),nil,nil,sw_maximize);
+  //Patreon link removed
 end;
 
 procedure TAbout.Label8Click(Sender: TObject);
 begin
-  ShellExecute(0, pchar('open'),pchar('https://cheatengine.org/'), pchar(''),pchar(''), SW_MAXIMIZE	);
+  //CE website link removed
 end;
 
 procedure TAbout.Label9Click(Sender: TObject);
 begin
-  ShellExecute(0, pchar('open'),pchar('http://forum.cheatengine.org/'), pchar(''),pchar(''), SW_MAXIMIZE	);
+  //CE forum link removed
 end;
 
 procedure TAbout.Image1MouseDown(Sender: TObject; Button: TMouseButton;

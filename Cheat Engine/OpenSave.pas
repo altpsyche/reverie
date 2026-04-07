@@ -199,7 +199,7 @@ implementation
 
 uses MainUnit, mainunit2, symbolhandler, symbolhandlerstructs, LuaHandler,
      formsettingsunit {$ifdef windows},frmExeTrainerGeneratorUnit, trainergenerator{$endif},
-     ProcessHandlerUnit, parsers{$ifdef windows},feces{$endif} ,asktorunluascript;
+     ProcessHandlerUnit, parsers{$ifdef windows},tablesignature{$endif} ,asktorunluascript;
 
 
 

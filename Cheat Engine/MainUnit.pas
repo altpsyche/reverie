@@ -38,7 +38,7 @@ uses
   windows7taskbar, tablist, DebuggerInterface, vehdebugger, tableconverter,
   customtypehandler, lua, luahandler, lauxlib, lualib, frmSelectionlistunit,
   htmlhelp, win32int, {defaulttranslator,} fileaccess, formdesignerunit,
-  ceguicomponents, frmautoinjectunit, cesupport, trainergenerator, genericHotkey,
+  ceguicomponents, frmautoinjectunit, trainergenerator, genericHotkey,
   luafile, xmplayer_server, sharedMemory{$ifdef windows}, win32proc{$endif},
   vmxfunctions, FileUtil, networkInterfaceApi, networkconfig, d3dhookUnit, PNGcomn,
   FPimage, byteinterpreter, frmgroupscanalgoritmgeneratorunit, vartypestrings,
@@ -1121,9 +1121,9 @@ uses cefuncproc, MainUnit2, ProcessWindowUnit, MemoryBrowserFormUnit, TypePopup,
   frmD3DHookSnapshotConfigUnit,frmSaveSnapshotsUnit, frmsnapshothandlerUnit,
   frmNetworkDataCompressionUnit{$endif},ProcessHandlerUnit, processlist, pointeraddresslist,
   PointerscanresultReader, Parsers, Globals {$ifdef windows},GnuAssembler, xinput{$endif} ,DPIHelper,
-  multilineinputqueryunit {$ifdef windows},winsapi{$endif} ,LuaClass, Filehandler{$ifdef windows}, feces{$endif}
+  multilineinputqueryunit {$ifdef windows},winsapi{$endif} ,LuaClass, Filehandler{$ifdef windows}, tablesignature{$endif}
   {$ifdef windows},frmDBVMWatchConfigUnit, frmDotNetObjectListUnit{$endif} ,ceregistry ,UnexpectedExceptionsHelper
-  ,frmFoundlistPreferencesUnit, fontSaveLoadRegistry{$ifdef windows}, cheatecoins{$endif},strutils, iptlogdisplay,
+  ,frmFoundlistPreferencesUnit, fontSaveLoadRegistry,strutils, iptlogdisplay,
   libcepack, symbolsync;
 
 resourcestring
@@ -5899,7 +5899,7 @@ begin
   callhelp := False;
   Result := True;
 
-  wikipath:='https://wiki.cheatengine.org/index.php';
+  wikipath:=''; //TODO: replace with Reverie docs URL
   wikiurl:='';
 
   if command = HELP_CONTEXT then
@@ -7295,14 +7295,7 @@ begin
 end;
 
 procedure TMainForm.LogoClick(Sender: TObject);
-var s: string;
-begin
-  s:=format('http://www.cheatengine.org/?referredby=CE%.2f',[ceversion]);
-  if messagedlg(rsDoYouWantToGoToTheCheatEngineWebsite, mtConfirmation,
-    [mbYes, mbNo], 0) = mrYes then
-    ShellExecute(0, PChar('open'), PChar(s),
-      PChar(''), PChar(''), SW_MAXIMIZE);
-
+  //Referral URL removed
 end;
 
 procedure TMainForm.VarTypeDropDown(Sender: TObject);
@@ -8586,7 +8579,6 @@ begin
       cenorm[4]:='A';
       caption:=cenorm;
     end;
-    EnableCheatECoinSystem;
   end;
   {$endif}
 
@@ -11137,7 +11129,7 @@ end;
 
 procedure TMainForm.Helpindex1Click(Sender: TObject);
 begin
-  ShellExecute(0,'open','https://wiki.cheatengine.org/index.php',nil,nil,SW_SHOW);
+  //Help URL removed - TODO: replace with Reverie docs URL
 //  Application.HelpContext(1);
 end;
 
