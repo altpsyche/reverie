@@ -240,13 +240,13 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
     unsigned offset, length, align, max_align, i, k, f;
     addr_t mem, addr;
 
-	//Cheat Engine modification
+	//Reverie modification
 	unsigned run_section_alignment;
 	if (s1->section_align > RUN_SECTION_ALIGNMENT)
 		run_section_alignment = s1->section_align-1;
 	else
 		run_section_alignment = RUN_SECTION_ALIGNMENT;
-	//Cheat Engine modificiation
+	//Reverie modificiation
 
     if (NULL == ptr) {
         s1->nb_errors = 0;
@@ -263,7 +263,7 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
 
     offset = max_align = 0, mem = (addr_t)ptr;
 #ifdef _WIN64
-	if (s1->binary_writer_func == 0)  //Cheat Engine does not put that there
+	if (s1->binary_writer_func == 0)  //Reverie does not put that there
       offset += sizeof (void*); /* space for function_table pointer */
 #endif
     for (k = 0; k < 2; ++k) {
@@ -275,7 +275,7 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
             if (k != !(s->sh_flags & SHF_EXECINSTR))
                 continue;
             align = s->sh_addralign - 1;
-            if (++f == 1 && align < run_section_alignment) //cheat engine modification:  RUN_SECTION_ALIGNMENT->run_section_alignment
+            if (++f == 1 && align < run_section_alignment) //Reverie modification:  RUN_SECTION_ALIGNMENT->run_section_alignment
                 align = run_section_alignment;
             if (max_align < align)
                 max_align = align;
@@ -323,7 +323,7 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
             ptr = (char*)((addr_t)ptr - ptr_diff);
 		if (NULL == s->data || s->sh_type == SHT_NOBITS)
 		{
-			//cheat engine binary writer addition start
+			//Reverie binary writer addition start
 			if (s1->binary_writer_func)
 			{
 				if (length)
@@ -337,12 +337,12 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
 				
 			}
 			else
-		    //cheat engine binary writer addition stop
+		    //Reverie binary writer addition stop
 				memset(ptr, 0, length);
 		}
 		else
 		{
-			//cheat engine binary writer addition start
+			//Reverie binary writer addition start
 			if (s1->binary_writer_func)
 			{
 				//MessageBoxA(0, "BLA", "BLA", 0);
@@ -382,7 +382,7 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
                 }
 			}
 			else
-			//cheat engine binary writer addition stop
+			//Reverie binary writer addition stop
 				memcpy(ptr, s->data, length);
 		}
         /* mark executable sections as executable in memory */
@@ -405,9 +405,9 @@ static int tcc_relocate_ex(TCCState *s1, void *ptr, addr_t ptr_diff)
 
 static void set_pages_executable(TCCState *s1, void *ptr, unsigned long length)
 {
-  //Cheat Engine modification:  This code is not needed
+  //Reverie modification:  This code is not needed
   return;
-  //Cheat Engine modification end
+  //Reverie modification end
 
 
 
@@ -438,7 +438,7 @@ static void set_pages_executable(TCCState *s1, void *ptr, unsigned long length)
 static void *win64_add_function_table(TCCState *s1)
 {
 	void *p = NULL;
-	//cheat engine
+	//Reverie
 /*
     if (s1->uw_pdata) {
         p = (void*)s1->uw_pdata->sh_addr;
@@ -452,7 +452,7 @@ static void *win64_add_function_table(TCCState *s1)
 	*/
     return p;
 
-	//cheat engine stop
+	//Reverie stop
 }
 
 
@@ -787,9 +787,9 @@ static void rt_getcontext(ucontext_t *uc, rt_context *rc)
 #elif defined(__aarch64__) && defined(__OpenBSD__)
     rc->ip = uc->sc_elr;
     rc->fp = uc->sc_x[29];
-#elif defined(__aarch64__) //darwin in this case  (Cheat engine modification start)
+#elif defined(__aarch64__) //darwin in this case  (Reverie modification start)
     rc->ip = uc->uc_mcontext->__ss.__pc;
-    rc->fp = uc->uc_mcontext->__ss.__fp;  // (Cheat engine modification stop)
+    rc->fp = uc->uc_mcontext->__ss.__fp;  // (Reverie modification stop)
 #elif defined(__riscv)
     rc->ip = uc->uc_mcontext.__gregs[REG_PC];
     rc->fp = uc->uc_mcontext.__gregs[REG_S0];

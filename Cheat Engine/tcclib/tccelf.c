@@ -921,7 +921,7 @@ ST_FUNC void relocate_syms(TCCState *s1, Section *symtab, int do_resolve)
             name = (char *) s1->symtab->link->data + sym->st_name;
             
             
-                     //cheat engine symbol lookup start
+                     //Reverie symbol lookup start
                      if (s1->symbol_lookup_func)
                      {
                          void *addr = s1->symbol_lookup_func(s1->symbol_lookup_data, name);
@@ -940,11 +940,11 @@ ST_FUNC void relocate_syms(TCCState *s1, Section *symtab, int do_resolve)
 
             if (do_resolve) {
 #if defined TCC_IS_NATIVE && !defined TCC_TARGET_PE                
-//Cheat Engine
+//Reverie
 				/* dlsym() needs the undecorated name.  */
 				void *addr = s1->symbol_lookup_func(s1->symbol_lookup_data, name);
                 //void *addr = dlsym(RTLD_DEFAULT, &name[s1->leading_underscore]);
-//Cheat Engine Stop
+//Reverie Stop
 #if TARGETOS_OpenBSD || TARGETOS_FreeBSD || TARGETOS_NetBSD
 		if (addr == NULL) {
 		    int i;

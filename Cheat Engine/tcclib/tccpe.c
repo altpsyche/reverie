@@ -1263,7 +1263,7 @@ static int pe_check_symbols(struct pe_info *pe)
 
 			if (imp_sym <= 0)
 			{
-				//Cheat Engine Symbol Lookup Addition Start
+				//Reverie Symbol Lookup Addition Start
 				//Check if CE knows it
 				if (s1->symbol_lookup_func)
 				{
@@ -1285,7 +1285,7 @@ static int pe_check_symbols(struct pe_info *pe)
 				}
 
 				sym->st_other |= ST_PE_IMPORT;
-				//Cheat Engine Symbol Lookup Addition Start				
+				//Reverie Symbol Lookup Addition Start				
 				
 
 				if (imp_sym <= 0)
