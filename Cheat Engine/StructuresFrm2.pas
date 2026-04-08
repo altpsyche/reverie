@@ -7302,7 +7302,7 @@ begin
       sender.Canvas.Font.Color:=fDefaultColor;
 
     if nodescription then
-    begin        //blatantly stolen from DecColor   (why the fuck is there no incColor ?)
+    begin        //adapted from DecColor (no IncColor helper exists in the LCL)
       RedGreenBlue(ColorToRGB(sender.Canvas.Font.Color), R, G, B);
       R := Max(0, min(255, Integer(R) + 75));
       G := Max(0, min(255, Integer(G) + 75));

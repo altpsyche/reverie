@@ -1525,90 +1525,51 @@ begin
 end;
 
 var cachedSystemType: integer=-1;
-function GetSystemType: Integer;  //from Stuart Johnson with a little change by me
-const
- { operating system constants }
-
- cOsUnknown = 999999;
- cOsWin95 = 0;
- cOsWin98 = 1;
- cOsWin98SE = 2;
- cOsWinME = 3;
- cOsWinNT = 4;
- cOsWin2000 = 5;
- cOsWinXP = 6;
- cOsNewer = 7;
-
+function GetSystemType: Integer;
+//Returns a coarse OS family integer using the legacy Cheat Engine scheme:
+//  4 = NT4, 5 = Win2000, 6 = WinXP, 7 = Vista or newer (Win7/8/10/11/...)
+//Reverie targets Windows 10+, so this should always return 7 in practice.
+//Detection uses RtlGetVersion (ntdll) because GetVersionEx lies on Win8.1+
+//unless the binary is manifested for the target OS.
 {$IFDEF windows}
+type
+  TRtlGetVersion = function(var info: TOSVersionInfo): LongInt; stdcall;
 var
- osVerInfo : TOSVersionInfo;
- majorVer, minorVer : Integer;
+  RtlGetVersion: TRtlGetVersion;
+  ver: TOSVersionInfo;
+  ntdll: HMODULE;
 {$ENDIF}
-
 begin
- {$IFDEF windows}
- if cachedSystemType<>-1 then
-   exit(cachedSystemType);
+  {$IFDEF windows}
+  if cachedSystemType<>-1 then
+    exit(cachedSystemType);
 
-   if overridedebug then
-   begin
-     result:=cOsWinXP;
-     exit;
-   end;
-
-  { set operating system type flag }
-   osVerInfo.dwOSVersionInfoSize := SizeOf(TOSVersionInfo);
-   if GetVersionEx(osVerInfo) then
-     begin
-       majorVer := osVerInfo.dwMajorVersion;
-       minorVer := osVerInfo.dwMinorVersion;
-       case osVerInfo.dwPlatformId of
-         VER_PLATFORM_WIN32_NT : { Windows NT/2000 }
-           begin
-             if majorVer <= 4 then
-               result := cOsWinNT
-             else
-               if (majorVer = 5) AND (minorVer= 0) then
-                 result := cOsWin2000
-               else
-                 if (majorVer = 5) AND (minorVer = 1) then
-                   result := cOsWinXP
-               else if (majorver > 5) then result:=cOsNewer
-             else
-             result := cOsUnknown;
-           end; {case }
-       VER_PLATFORM_WIN32_WINDOWS : { Windows 9x/ME }
-         begin
-           if (majorVer = 4) AND (minorVer = 0) then
-             result := cOsWin95
-           else
-             if (majorVer = 4) AND (minorVer = 10) then
-               begin
-                 if osVerInfo.szCSDVersion[1] = 'A' then
-                   result := cOsWin98SE
-                 else
-                    result := cOsWin98;
-                 end {if Version = 'A'}
-               else
-                 if (majorVer = 4) AND (minorVer = 90) then
-                   result := cOsWinME
-                 else
-                    result := cOsUnknown;
-         end; {case VER_PLATFORM_WIN32_WINDOWS}
-       else
-        result := cOsUnknown;
-     end;
-   end
-  else
-    result := cOsUnknown;
-
-  systemtype:=result;
-  {$else}
-
-  result:=cOsUnknown;
-
- {$ENDIF}
-  cachedSystemType:=result;
+  result := 7; //safe default for modern Windows
+  ntdll := GetModuleHandle('ntdll.dll');
+  if ntdll<>0 then
+  begin
+    @RtlGetVersion := GetProcAddress(ntdll, 'RtlGetVersion');
+    if Assigned(RtlGetVersion) then
+    begin
+      FillChar(ver, SizeOf(ver), 0);
+      ver.dwOSVersionInfoSize := SizeOf(ver);
+      if RtlGetVersion(ver) = 0 then
+      begin
+        if ver.dwMajorVersion >= 6 then
+          result := 7
+        else if (ver.dwMajorVersion = 5) and (ver.dwMinorVersion >= 1) then
+          result := 6
+        else if (ver.dwMajorVersion = 5) and (ver.dwMinorVersion = 0) then
+          result := 5
+        else
+          result := 4;
+      end;
+    end;
+  end;
+  cachedSystemType := result;
+  {$ELSE}
+  result := 7;
+  {$ENDIF}
 end;
 
 
@@ -4005,7 +3966,7 @@ initialization
   setlength(donthidelist,0);
   allwindowsareback:=true;
   stealthhook:=0;
-  iswin2kplus:=GetSystemType>=5;
+  GetSystemType; //cache system type
 
 
   {$IFDEF windows}

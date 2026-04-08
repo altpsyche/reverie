@@ -1711,7 +1711,7 @@ void threadClosedEvent(int socket)
 
   if (connections<0)
   {
-    debug_log("Connection counter is fucked!\n");
+    debug_log("Connection counter is corrupted!\n");
     CloseAllPipes();
 
     connections=0;

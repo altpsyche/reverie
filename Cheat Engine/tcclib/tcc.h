@@ -197,7 +197,7 @@ extern long double strtold (const char *__nptr, char **__endptr);
 # endif
 #endif
 
-#define TCC_IS_NATIVE //cheat engine fuckery
+#define TCC_IS_NATIVE //cheat engine modifications
 
 #if !defined TCC_IS_NATIVE \
     || (defined CONFIG_TCC_BACKTRACE && CONFIG_TCC_BACKTRACE==0)

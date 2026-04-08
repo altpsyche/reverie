@@ -4908,7 +4908,7 @@ begin
   for i:=2 to opcodecount do
     if opcodes[i].mnemonic<opcodes[i-1].mnemonic then
     begin
-      outputdebugstring('FUCK YOU! THE PROGRAMMER WAS STUPID ENOUGH TO MESS THIS PART UP IN PART '+IntToStr(i)+' '+opcodes[i-1].mnemonic+'<'+opcodes[i].mnemonic);
+      outputdebugstring('Opcode table is not sorted at index '+IntToStr(i)+': '+opcodes[i].mnemonic+'<'+opcodes[i-1].mnemonic);
     end;
   {$endif}
 

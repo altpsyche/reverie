@@ -19,8 +19,6 @@ var
   mtid: TThreadID;
 
   overridefont: TFont;
-  aprilfools: boolean;
-
   ScanAllTypes: TVariableTypes=[vtDword, vtSingle, vtDouble];
 
   buffersize: dword=512*1024;
@@ -140,8 +138,6 @@ var
   ownprocesshandle: THandle;
   stealthhook: thandle;
 
-  //windows version data
-  iswin2kplus: boolean;
   scanpriority: TThreadPriority;
 
   useAPCtoInjectDLL: boolean=false;
@@ -167,7 +163,7 @@ var
 
   allocsAddToUnexpectedExceptionList: boolean;
 
-  WarnOnNearbyAllocationFailure: boolean=true; //not saved in settings. Inconvenience the user every fucking time they restart (Learn to use 14 byte jmps people)
+  WarnOnNearbyAllocationFailure: boolean=true; //not saved in settings. Inconvenience the user every time they restart
   NearbyAllocationFailureFatal: boolean=true;
 
   {$ifdef darwin}

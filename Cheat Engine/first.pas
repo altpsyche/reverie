@@ -21,7 +21,6 @@ type
 
 var
   SetProcessDpiAwareness:function(value: PROCESS_DPI_AWARENESS):HRESULT; stdcall;
-  SetProcessDPIAware:function: BOOL; stdcall;
   l: HModule;
 begin
  // OutputDebugString('setDPIAware');
@@ -37,19 +36,6 @@ begin
       exit;
     end;
   end;
-
-
-  //still here, probably win8.0 or 7
-  l:=LoadLibrary('user32.dll');
-  if l<>0 then
-  begin
-   // OutputDebugString('p2');
-    farproc(SetProcessDPIAware):=GetProcAddress(l,'SetProcessDPIAware');
-    if assigned(SetProcessDPIAware) then
-      SetProcessDPIAware;
-  end;
-
-  OutputDebugString('p3');
 end;
 
 var

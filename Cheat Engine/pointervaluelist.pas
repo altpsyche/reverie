@@ -22,7 +22,7 @@ uses
   LCLIntf, dialogs, SysUtils, classes, ComCtrls, CEFuncProc,
      NewKernelHandler, symbolhandler, symbolhandlerstructs, math,
      bigmemallochandler, maps, luahandler, lua, lauxlib, lualib, LuaClass,
-     LuaObject, zstream, commonTypeDefs, AvgLvlTree, {$ifdef laztrunk}AVL_Tree{$else}laz_avl_Tree{$endif};
+     LuaObject, zstream, commonTypeDefs, AvgLvlTree, AVL_Tree;
 
 const scandataversion=1;
 
@@ -1303,7 +1303,7 @@ begin
     setlength(memoryregion,j+1);
 
 
-    //split up the memory regions into small chunks of max 512KB (so don't allocate a fucking 1GB region)
+    //split up the memory regions into small chunks of max 512KB (avoid allocating an oversized 1GB region)
     i:=0;
     while i<length(memoryregion) do
     begin

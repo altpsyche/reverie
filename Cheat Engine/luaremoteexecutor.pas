@@ -485,7 +485,7 @@ begin
     script.add('call mapviewoffile');
 
     script.add('cmp rax,0');
-    script.add('je end'); //the fuck?
+    script.add('je end'); //unexpected branch target
 
     //handle result
     script.add('mov [rbp],rax');

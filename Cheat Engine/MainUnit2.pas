@@ -73,7 +73,6 @@ resourcestring
   strFirstScan='First Scan';
   strNoDescription='No description';
 
-  strNeedNewerWindowsVersion='This function only works in Windows 2000+ (perhaps also NT but not tested)';
 
   //scantypes
   strexact='Exact';

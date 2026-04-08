@@ -73,7 +73,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 		
 
 		strcat(tempfolder,"cetrainers");		
-		CreateDirectory(tempfolder, &sa); //if it works, great. If it fails, that folder probably exists or the system is such a piece of shit it won't work eitherway
+		CreateDirectory(tempfolder, &sa); //if it works, great. If it fails, the folder probably exists or directory creation is unavailable
 
 		//printf("tempfolder=%s\n", tempfolder);
 		if (GetTempFileNameA(tempfolder,"CET",0,tempdir)>0)

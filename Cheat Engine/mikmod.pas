@@ -431,7 +431,7 @@ procedure TMikModSFX.play;
 var i: integer;
 begin
   MikMod_EnableOutput();
-  if Sample_Play(s,0,SFX_CRITICAL or SF_LOOP)=-1 then raise exception.create('fuck');
+  if Sample_Play(s,0,SFX_CRITICAL or SF_LOOP)=-1 then raise exception.create('MikMod sample playback failed');
   MikMod_Update();
 end;
 

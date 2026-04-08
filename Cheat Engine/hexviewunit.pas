@@ -317,7 +317,7 @@ uses formsettingsunit, Valuechange, MainUnit, ProcessHandlerUnit, parsers,
 {$ENDIF}
 
 resourcestring
-  rsBigFuckingError = 'Big fucking error';
+  rsBigError = 'Big error';
   rsInvalidBytesPerSeperatorValue = 'Invalid BytesPerSeperator value:%s';
   rsThisLooksLikeAnArrayOfByteDoYouWantToInputItAsAHex = 'This looks like an '
     +'array of byte. Do you want to input it as a hexadecimal string?';
@@ -446,7 +446,7 @@ procedure THexView.ShowDifference(hv: THexview);
 begin
   EndDifferenceView;
 
-  if hv=self then raise exception.create(rsBigFuckingError);
+  if hv=self then raise exception.create(rsBigError);
   //set an addresslock between this and that hexview
 
   lock(hv);
@@ -2689,7 +2689,7 @@ begin
 
       if fShowDiffHV<>nil then
       begin
-        //slows it down a lot, especially fucks up the getByte function
+        //slows it down a lot, especially messes up the getByte function
         compareToAddress:=fShowDiffHv.fAddress+currentAddress-fAddress;
 
         case displayType of

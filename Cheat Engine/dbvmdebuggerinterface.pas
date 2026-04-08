@@ -342,7 +342,7 @@ end;
 
 function TDBVMDebugInterface.usesDebugRegisters: boolean;
 begin
-  result:=false; //doesn't give one fuck about debugregisters
+  result:=false; //debug registers are unsupported in this interface
 end;
 
 function TDBVMDebugInterface.SetThreadContext(hThread: THandle; const lpContext: TContext; isFrozenThread: Boolean=false): BOOL;

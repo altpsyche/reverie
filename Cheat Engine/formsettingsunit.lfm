@@ -2407,17 +2407,7 @@ object formSettings: TformSettings
         ClientHeight = 750
         ClientWidth = 739
         ImageIndex = 6
-        object TauntOldOsUser: TLabel
-          Left = 0
-          Height = 15
-          Top = 735
-          Width = 739
-          Align = alBottom
-          Alignment = taCenter
-          Caption = 'I really recommend upgrading to Windows 2000 or later mister Flintstone'
-          ParentColor = False
-          Visible = False
-        end
+
         object GroupBox3: TGroupBox
           Left = 5
           Height = 77

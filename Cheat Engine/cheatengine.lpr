@@ -57,9 +57,9 @@ uses
   LuaHandler, frmLuaEngineUnit, frmMemviewPreferencesUnit,
   frmBreakpointConditionUnit, frmTracerConfigUnit, frmStackViewUnit, luaJit,
   ScrollBoxEx, fileaccess, ceguicomponents, formdesignerunit, LuaCaller,
-  LuaSyntax, cesupport, trainergenerator, genericHotkey,
+  LuaSyntax, trainergenerator, genericHotkey,
   frmExeTrainerGeneratorUnit, luafile, xmplayer_server, xmplayer_defines,
-  ExtraTrainerComponents, frmAdConfigUnit, IconStuff, cetranslator,
+  ExtraTrainerComponents, IconStuff, cetranslator,
   frmStringMapUnit, MemFuncs, frmStringPointerScanUnit,
   frmStructPointerRescanUnit, sharedMemory, disassemblerComments,
   frmFilePatcherUnit, LuaCanvas, LuaPen, LuaFont, LuaBrush, LuaPicture, LuaMenu,
@@ -103,7 +103,7 @@ uses
   frmEditHistoryUnit, LuaInternet, xinput, frmUltimap2Unit, cpuidunit, libipt,
   DPIHelper, Graphics, fontSaveLoadRegistry, registry, frmWatchlistUnit,
   frmWatchListAddEntryUnit, frmBusyUnit, FindDialogFix, LuaCustomType, LuaSQL,
-  bCrypt, feces, askToRunLuaScript, frmDBVMWatchConfigUnit,
+  bCrypt, tablesignature, askToRunLuaScript, frmDBVMWatchConfigUnit,
   frmStructuresNewStructureUnit, frmDotNetObjectListUnit, vextypedef,
   frmFindDialogUnit, frmRearrangeStructureListUnit,
   autoassemblerexeptionhandler, frmstructurecompareunit, addressedit,
@@ -114,8 +114,8 @@ uses
   frmBranchMapperUnit, frmSymbolEventTakingLongUnit, LuaCheckListBox,
   textrender, diagramtypes, diagramblock, diagram, LuaDiagram, LuaDiagramBlock,
   LuaDiagramLink, diagramlink, BreakpointTypeDef, frmFoundlistPreferencesUnit,
-  LuaHeaderSections, frmDebuggerAttachTimeoutUnit, cheatecoins,
-  frmMicrotransactionsUnit, frmSyntaxHighlighterEditor, LuaCustomImageList,
+  LuaHeaderSections, frmDebuggerAttachTimeoutUnit,
+  frmSyntaxHighlighterEditor, LuaCustomImageList,
   dotnethost, rttihelper, cefreetype, LuaDotNetPipe, LuaRemoteExecutor,
   autoassemblercode, CSharpCompiler, newhintwindow, memrecDataStructures,
   LuaCECustomButton, DBVMDebuggerInterface, frmCR3SwitcherUnit, tcclib,
@@ -259,15 +259,15 @@ begin
 {$endif}
 end;
 
-type TFormFucker=class
+type TFormFontApplier=class
   private
     procedure addFormEvent(Sender: TObject; Form: TCustomForm);
 end;
 
 
-procedure TFormFucker.addFormEvent(Sender: TObject; Form: TCustomForm);
+procedure TFormFontApplier.addFormEvent(Sender: TObject; Form: TCustomForm);
 begin
-  //fuuuuucking time
+  //apply font override to new forms
   if (form<>nil) and (overridefont<>nil) then
   begin
     if (form is TsynCompletionForm)=false then   //dus nut wurk with this
@@ -283,7 +283,7 @@ end;
 var
   i: integer;
 
-  ff: TFormFucker;
+  ff: TFormFontApplier;
   r: TRegistry;
 
   path: string;
@@ -360,7 +360,7 @@ begin
             overridefont:=TFont.create;
             LoadFontFromRegistry(overridefont,r);
 
-            ff:=TFormFucker.Create;
+            ff:=TFormFontApplier.Create;
             screen.AddHandlerFormAdded(@ff.addFormEvent);
 
           end;
@@ -378,7 +378,7 @@ begin
           overridefont:=TFont.create;
 
         overridefont.size:=strtoint(copy(ParamStr(i), 10, length(ParamStr(i))));
-        ff:=TFormFucker.Create;
+        ff:=TFormFontApplier.Create;
         screen.AddHandlerFormAdded(@ff.addFormEvent);
 
       except

@@ -123,7 +123,7 @@ resourcestring
 
 procedure TStringscan.docleanup;
 begin
-  if frmstringmap<>nil then //how the fuck did this thread get started if it is nil ?
+  if frmstringmap<>nil then //defensive: this thread should not have started if frmstringmap is nil
   begin
     progressbar.Position:=0;
 

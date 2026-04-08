@@ -219,7 +219,7 @@ type
     Assembler: TTabSheet;
     cbHandleBreakpoints: TCheckBox;
     Extra: TTabSheet;
-    TauntOldOsUser: TLabel;
+
     GroupBox3: TGroupBox;
     cbKernelQueryMemoryRegion: TCheckBox;
     cbKernelReadWriteProcessMemory: TCheckBox;
@@ -401,7 +401,7 @@ uses
   aboutunit, MainUnit, MainUnit2, frmExcludeHideUnit, ModuleSafetyUnit,
   frmProcessWatcherUnit, CustomTypeHandler, processlist, commonTypeDefs,
   frmEditHistoryUnit, Globals, fontSaveLoadRegistry, CETranslator,
-  MemoryBrowserFormUnit, DBK32functions, feces, UnexpectedExceptionsHelper,
+  MemoryBrowserFormUnit, DBK32functions, tablesignature, UnexpectedExceptionsHelper,
   cpuidUnit, DPIHelper, symbolsync, ProcessHandlerUnit, GDBServerDebuggerInterface,
   DebuggerInterfaceAPIWrapper;
 
@@ -1999,8 +1999,7 @@ begin
   if is64bitos then
   begin
 
-    {TauntOldOsUser.Visible:=true;
-    TauntOldOsUser.Caption:=rsPleaseBootWithUnsignedDriversAllowedF8DuringBootOr;   }
+
 
 
 

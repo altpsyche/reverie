@@ -23,7 +23,7 @@ uses LCLIntf, LCLType, macport, macportdefines, classes,sysutils,byteinterpreter
   commonTypeDefs, maps, math,vextypedef, syncobjs, NewKernelHandler;
 {$endif}
 
-//translation: There is no fucking way I change the descriptions to resource strings
+//translation: descriptions are intentionally not resource strings
 //if you're bored, go do this
 
 type Tprefix = set of byte;
@@ -1578,7 +1578,7 @@ end;
 
 function TDisassembler.readMemory(address: ptruint; destination: pointer; size: integer): integer;
 //reads the bytes at the given address and returns the number of bytes read
-//in regards to the cloaked memory support, this is ONLY for the disassembler, to show the fuckery that's going on
+//in regards to the cloaked memory support, this is ONLY for the disassembler, to show the cloaking activity
 var
   actualread: ptruint;
 

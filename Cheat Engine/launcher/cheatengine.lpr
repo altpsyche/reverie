@@ -42,7 +42,7 @@ var IsWow64Process        :TIsWow64Process;
     s: string;
 begin
   {$ifdef cpu64}
-  MessageBox(0,'A fucking retard thought that removing an earlier $ERROR line would be enough to run this','',0);
+  MessageBox(0,'This launcher must be compiled as 32-bit (the $ERROR guard above should never be bypassed).','Build configuration error',MB_ICONERROR or MB_OK);
   exit;
   {$endif}
 
@@ -69,7 +69,7 @@ begin
   if GetModuleFileNameW(self, selfname, 512)>0 then
     selfpath:=ExtractFilePath(selfname)
   else
-    selfpath:=''; //fuck it if it fails
+    selfpath:=''; //ignore failure and continue
 
   param:='';
   for i:=1 to paramcount do

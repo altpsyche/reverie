@@ -6866,7 +6866,7 @@ begin
       begin
         usedtempdir:=WinCPToUTF8(usedtempdir);
         if DirectoryExistsUTF8(usedtempdir)=false then
-          exit; //fuck it , this user doesn't even DESERVE structures now...
+          exit; //bail out: structures cannot be loaded in this state
       end;
     end;
   end;

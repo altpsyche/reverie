@@ -189,7 +189,7 @@ begin
     address:=ptrUint(mbi.baseaddress)+mbi.RegionSize;
   end;
 
-  //split up the memory regions into small chunks of max 512KB (so don't allocate a fucking 1GB region)
+  //split up the memory regions into small chunks of max 512KB (avoid allocating an oversized 1GB region)
   i:=0;
   while i<length(memregions) do
   begin

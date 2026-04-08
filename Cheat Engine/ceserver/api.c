@@ -2541,7 +2541,7 @@ int ContinueFromDebugEvent(HANDLE hProcess, int tid, int ignoresignal)
 #endif
         if (result!=0)
         {
-          debug_log("PTRACE_SINGLESTEP failed (%d). Shit happens\n", errno);
+          debug_log("PTRACE_SINGLESTEP failed (%d)\n", errno);
           result=safe_ptrace(PTRACE_CONT, tid, 0,(void*)(size_t)signal);
         }
 
@@ -4317,7 +4317,7 @@ HANDLE CreateToolhelp32Snapshot(DWORD dwFlags, DWORD th32ProcessID)
         char exepath[512];
         char processpath[512];
         snprintf(exepath, 512, "/proc/%s/exe", currentfile->d_name);
-        exepath[511]=0; //'should' not be needed in linux, but I read that microsoft is an asshole with this function
+        exepath[511]=0; //defensive null terminator (some platforms are inconsistent here)
 
         int i=readlink(exepath, processpath, 254);
         if (i != -1)

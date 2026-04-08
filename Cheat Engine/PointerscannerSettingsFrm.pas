@@ -270,13 +270,13 @@ resourcestring
   rsHighest = 'Highest';
   rsTimeCritical = 'TimeCritical';
 
-  strMaxOffsetsIsStupid = 'Sorry, but the max offsets should be 1 or higher, or else disable the checkbox'; //'Are you a fucking retard?';
+  strMaxOffsetsIsStupid = 'Sorry, but the max offsets should be 1 or higher, or else disable the checkbox';
   rsUseLoadedPointermap = 'Use saved pointermap';
 
   rsNoCompareFiles = 'If you do not use the compare results with other saved pointermap option you will get billions of useless results and giga/terrabytes of wasted diskspace and rescans will take hours if not days. Are you sure ?';
   rsSelectAFile = '<Select a file>';
   rsScandataFilter = 'All files (*.*)|*.*|Scan Data (*.scandata)|*.scandata';
-  rsReusedTheSameFile = 'This file is already in the list of scandata files to be used'; //alternatively: 'For fucks sake dude. You already picked this file. Pick something else!'
+  rsReusedTheSameFile = 'This file is already in the list of scandata files to be used';
   rsFilename = 'Filename';
   rsAddress = 'Address';
   rsInvalidAddress = 'Invalid address';

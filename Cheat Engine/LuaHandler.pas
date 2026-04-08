@@ -31,9 +31,7 @@ uses
   {$ifdef darwin}
   ,macportdefines
   {$endif},
-  {$ifdef laztrunk}
   LazFileUtils,
-  {$endif}
   betterControls;
 
 
@@ -108,7 +106,7 @@ uses autoassembler, MainUnit, MainUnit2, LuaClass, frmluaengineunit, plugin, plu
   formsettingsunit, MemoryRecordUnit, debuggertypedefinitions, symbolhandler,
   symbolhandlerstructs, types,
   frmautoinjectunit, simpleaobscanner, addresslist, memscan, foundlisthelper,
-  cesupport, DBK32functions, sharedMemory, disassemblerComments, disassembler,
+  DBK32functions, sharedMemory, disassemblerComments, disassembler,
   LuaCanvas, LuaPen, LuaFont, LuaBrush, LuaPicture, LuaMenu, LuaDebug, LuaThread,
   LuaGraphic, LuaProgressBar, LuaOldD3DHook, LuaWinControl, LuaMemoryRecord,
   LuaForm, MemoryBrowserFormUnit, disassemblerviewunit, hexviewunit,
@@ -132,7 +130,7 @@ uses autoassembler, MainUnit, MainUnit2, LuaClass, frmluaengineunit, plugin, plu
   LuaDiagram, frmUltimap2Unit, frmcodefilterunit, BreakpointTypeDef, LuaSyntax,
   LazLogger, LuaSynedit, LuaRIPRelativeScanner, LuaCustomImageList ,ColorBox,
   rttihelper, LuaDotNetPipe, LuaRemoteExecutor, windows7taskbar, debugeventhandler,
-  tcclib, dotnethost, CSharpCompiler, LuaCECustomButton, feces, process,
+  tcclib, dotnethost, CSharpCompiler, LuaCECustomButton, tablesignature, process,
   networkInterface, networkInterfaceApi, LuaVirtualStringTree, userbytedisassembler,
   parsers, LuaNetworkInterface, symbolsync, GDBServerDebuggerInterface, contexthandler;
 
@@ -142,7 +140,7 @@ resourcestring
   rsLUA_DoScriptWasNotCalledRomTheMainThread = 'LUA_DoScript was not called '
     +'from the main thread';
   rsUndefinedLuaError = 'Undefined lua error';
-  rsCheatengineIsBeingAFag = 'Cheatengine is being a fag';
+  rsInternalLuaStateError = 'Internal Lua state error';
 
   rsInvalidFloat = 'Invalid floating point string:%s';
   rsInvalidInt = 'Invalid integer:%s';
@@ -1382,7 +1380,7 @@ begin
             system.vtObject: luaclass_newClass(L, parameters[i].VObject); //lua_pushlightuserdata(L, pointer(parameters[i].VObject));
             system.vtClass: lua_pushlightuserdata(L, pointer(parameters[i].VClass));
             system.vtWideChar, vtPWideChar, vtVariant, vtInterface,
-              vtWideString: lua_pushstring(L, rsCheatengineIsBeingAFag);
+              vtWideString: lua_pushstring(L, rsInternalLuaStateError);
             system.vtAnsiString: lua_pushstring(L, pchar(parameters[i].VAnsiString));
             system.vtCurrency: lua_pushnumber(L, parameters[i].VCurrency^);
             system.vtInt64:
@@ -5152,80 +5150,6 @@ end;
 
 
 
-
-
-function supportCheatEngine(L: Plua_State): integer; cdecl;
-var
-  parameters: integer;
-  //attachwindow, hasclosebutton, width, height, position ,yoururl OPTIONAL, extraparameters OPTIONAL, percentageshown OPTIONAL
-  attachwindow: TCustomForm;
-  hasCloseButton: boolean;
-  width: integer;
-  height: integer;
-  position: integer;
-  yoururl: string;
-  extraparameters: string;
-  percentageshown: integer;
-begin
-  result:=0;
-  parameters:=lua_gettop(L);
-  if parameters>=5 then
-  begin
-    attachwindow:=lua_toceuserdata(L, 1);
-    hasCloseButton:=lua_toboolean(L, 2);
-    width:=lua_tointeger(L, 3);
-    height:=lua_tointeger(L, 4);
-    position:=lua_tointeger(L, 5);
-
-    if parameters>=6 then
-      yoururl:=Lua_ToString(L, 6)
-    else
-      yoururl:='';
-
-    if parameters>=7 then
-      extraparameters:=Lua_ToString(L, 7)
-    else
-      extraparameters:='';
-
-    if parameters>=8 then
-      percentageshown:=lua_tointeger(L, 8)
-    else
-      percentageshown:=0;
-
-    lua_pop(L, lua_gettop(L));
-
-    if adwindow=nil then
-      adwindow:=TADWindow.Create2(Application, hasclosebutton);
-
-    adwindow.clientWidth:=width;
-    adwindow.clientheight:=height;
-    adwindow.show;
-    adwindow.AttachToForm(attachwindow);
-    case position of
-      0: adwindow.setPosition(akTop);
-      1: adwindow.setPosition(akRight);
-      2: adwindow.setPosition(akBottom);
-      3: adwindow.setPosition(akLeft);
-    end;
-
-    adwindow.setUserUrl(yoururl);
-    adwindow.setUserPercentage(percentageshown);
-    adwindow.optional:=extraparameters;
-
-    adwindow.LoadAdNow;
-
-
-  end else lua_pop(L, lua_gettop(L));
-end;
-
-function fuckCheatEngine(L: Plua_State): integer; cdecl;
-begin
-  lua_pop(L, lua_gettop(L));
-  if adwindow<>nil then
-    adWindow.visible:=false;
-
-  result:=0;
-end;
 
 
 function dbk_initialize(L: Plua_State): integer; cdecl;
@@ -12980,7 +12904,7 @@ begin
       codesize:=lua_tointeger(L,2)
     else
     begin
-      //no codesize given, calculate the number of bytes needed to put a 5 byte jmp in here. (make sure to use 3th alloc param, bitch please if you don't)
+      //no codesize given, calculate the number of bytes needed to put a 5 byte jmp in here. (use the 3rd alloc param to override)
       codesize:=0;
       ca:=address;
 
@@ -16628,11 +16552,6 @@ begin
 
     InitializeMemscan;
     InitializeFoundlist;
-
-
-    Lua_register(L, 'supportCheatEngine', supportCheatEngine);
-    Lua_register(L, 'fuckCheatEngine', fuckCheatEngine);
-
 
 
     lua_register(L, 'inheritsFromObject', inheritsFromObject);

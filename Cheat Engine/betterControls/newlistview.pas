@@ -138,7 +138,7 @@ begin
       AllowDarkModeForWindow(handle, 1);
       SetWindowTheme(handle, 'Explorer', nil);
 
-      theme:=OpenThemeData(0,'ItemsView');  //yeah....why make it obvious if you can make it obscure right ?  (This is a microsoft thing, not because i'm an asshole )
+      theme:=OpenThemeData(0,'ItemsView');  //undocumented theme name (Microsoft convention, not ours)
 
       if theme<>0 then
       begin

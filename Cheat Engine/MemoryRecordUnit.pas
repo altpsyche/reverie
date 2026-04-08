@@ -461,7 +461,7 @@ implementation
 uses processhandlerunit, Parsers;
 {$else}
 uses mainunit, addresslist, formsettingsunit, LuaHandler, lua, lauxlib, lualib, Contnrs,
-  processhandlerunit, Parsers, {$ifdef windows}winsapi,{$endif}autoassembler, globals{$ifdef windows}, cheatecoins{$endif};
+  processhandlerunit, Parsers, {$ifdef windows}winsapi,{$endif}autoassembler, globals;
 {$endif}
 
 
@@ -2576,9 +2576,7 @@ var f: string;
 
     p: boolean;
 begin
-  {$ifdef windows}
-  if state and aprilfools then decreaseCheatECoinCount;
-  {$endif}
+
 
   if state=fActive then exit; //no need to execute this is it's the same state
   if processingThread<>nil then exit; //don't change the state while processing
@@ -3301,7 +3299,7 @@ begin
                     begin
                       if (vartype<>vtCustom) or (fcustomtype.scriptUsesFloat) then
                       begin
-                        //handle it as an actual float(why the fuck would anyone put a float as hex...)
+                        //handle it as an actual float (unusual: float stored as hex)
                         try
                           v64:=strtoint64(temps);
                           buf:=@v64;
