@@ -22,25 +22,14 @@ uses
 const
   ceversion=7.51;
   strVersionPart='7.5.1';
-{$ifdef altname}  //i'd use $MACRO ON but fpc bugs out
-  strCheatEngine='Runtime Modifier'; //if you change this, also change it in first.pas
-  strCheatTable='Code Table';   //because it contains code.... duh.....
-  strCheatTableLower='code table';
-  strCheat='Modification';
-  strTrainer='Modifier';
-  strTrainerLower='modifier';
-  strMyCheatTables='My Mod Tables';
-  strSpeedHack='Speedmodifier';
-{$else}
-  strCheatEngine='Cheat Engine';
-  strCheatTable='Cheat Table';
-  strCheatTableLower='cheat table';
-  strCheat='Cheat';
+  strCheatEngine='Reverie';
+  strCheatTable='Reverie Table';
+  strCheatTableLower='reverie table';
+  strCheat='Mod';
   strTrainer='Trainer';
   strTrainerLower='trainer';
-  strMyCheatTables='My Cheat Tables';
+  strMyCheatTables='My Reverie Tables';
   strSpeedHack='Speedhack';
-{$endif}
 
 resourcestring
   cename = strCheatEngine;
