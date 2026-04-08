@@ -13286,7 +13286,7 @@ begin
     lua_pop(L, 1);
 
   //setup the server if needed
-  ts:='CEWINHOOK'+inttostr(processid);
+  ts:='RVWINHOOK'+inttostr(processid);
   if luaserverExists(ts)=false then
   begin
     tluaserver.create(ts);
@@ -13312,7 +13312,7 @@ begin
       async:=false;
 
     hWnd:=lua_tointeger(L, 1);
-    pc:=TLuaPipeClient.create('CEWINHOOKC'+inttostr(processid));
+    pc:=TLuaPipeClient.create('RVWINHOOKC'+inttostr(processid));
     try
       pc.writeByte(1);
       pc.writeQword(hWnd);
@@ -13378,7 +13378,7 @@ begin
       lua_gettable(L, -2);
       if lua_isnumber(L, -1) then
       begin
-        pc:=TLuaPipeClient.create('CEWINHOOKC'+inttostr(processid));
+        pc:=TLuaPipeClient.create('RVWINHOOKC'+inttostr(processid));
         try
           pc.writeByte(3);
           pc.writeQword(lua_tointeger(L, 1));

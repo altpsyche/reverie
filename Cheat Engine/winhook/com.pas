@@ -50,7 +50,7 @@ var
 begin
   while not terminated  do
   begin
-    pipe:=CreateNamedPipe(pchar('\\.\pipe\CEWINHOOKC'+inttostr(GetProcessID)), PIPE_ACCESS_DUPLEX, PIPE_TYPE_BYTE or PIPE_READMODE_BYTE or PIPE_WAIT, 255, 16, 8192, 0, nil);
+    pipe:=CreateNamedPipe(pchar('\\.\pipe\RVWINHOOKC'+inttostr(GetProcessID)), PIPE_ACCESS_DUPLEX, PIPE_TYPE_BYTE or PIPE_READMODE_BYTE or PIPE_WAIT, 255, 16, 8192, 0, nil);
 
     if ConnectNamedPipe(pipe, nil) or (GetLastError = ERROR_PIPE_CONNECTED) then
     begin
@@ -121,7 +121,7 @@ var
   starttime: qword;
 begin
   cs:=TCriticalSection.Create;
-  pipename:='CEWINHOOK'+inttostr(GetProcessID);
+  pipename:='RVWINHOOK'+inttostr(GetProcessID);
   starttime:=GetTickCount64;
   while GetTickCount64<starttime+5000 do
   begin
