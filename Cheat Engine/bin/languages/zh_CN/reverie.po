@@ -156,8 +156,8 @@ msgid "This is not a valid address"
 msgstr "这不是一个有效的地址"
 
 #: advancedoptionsunit.rsaocheatenginefailedtogetintotheconfigofselectedprogram
-msgid "Cheat Engine failed to get into the config of the selected program."
-msgstr "Cheat Engine 获取所选程序的配置失败."
+msgid "Reverie failed to get into the config of the selected program."
+msgstr "Reverie 获取所选程序的配置失败."
 
 #: advancedoptionsunit.rsaoerrorwhiletryingtocreatethesharedkeystructureetc
 msgid "Error while trying to create the shared key structure! (Which efficiently renders this whole feature useless)"
@@ -710,16 +710,16 @@ msgid "I couldn't attach the debugger to this process! You could try to open the
 msgstr "调试器无法附加到这个进程中! 你可以尝试使用进程选择器打开该进程! 如果仍然无法工作,请检查有无调试的权限."
 
 #: cedebugger.rsdonotclosece
-msgid "If you close Cheat Engine while the game is running, the game will close too. Are you sure you want to do this?"
-msgstr "如果你在游戏运行过程中关闭了 Cheat Engine, 游戏也会关闭. 是否继续?"
+msgid "If you close Reverie while the game is running, the game will close too. Are you sure you want to do this?"
+msgstr "如果你在游戏运行过程中关闭了 Reverie, 游戏也会关闭. 是否继续?"
 
 #: cedebugger.rspleasetargetanotherprocess
 msgid "Please target another process"
 msgstr "请打开其它进程"
 
 #: cedebugger.rsthiswillattachthedebuggerofcheatenginetothecurrent
-msgid "This will attach the debugger of Cheat Engine to the current process."
-msgstr "将会使用 Cheat Engine 的调试器附加当前进程."
+msgid "This will attach the debugger of Reverie to the current process."
+msgstr "将会使用 Reverie 的调试器附加当前进程."
 
 #: cedebugger.rsyoumustfirstopenaprocess
 msgid "You must first open a process"
@@ -1107,8 +1107,8 @@ msgid "The driver failed to load due to signing issues. If you have secure boot 
 msgstr ""
 
 #: dbk32functions.rspleaserunthe64bitversionofce
-msgid "Please run the 64-bit version of Cheat Engine"
-msgstr "请运行64位版本的Cheat Engine"
+msgid "Please run the 64-bit version of Reverie"
+msgstr "请运行64位版本的Reverie"
 
 #: dbk32functions.rsthedrivercouldntbeopened
 msgid "The driver couldn't be opened! It's not loaded or not responding. Luckely you are running dbvm so it's not a total waste. Do you wish to force load the driver?"
@@ -1123,8 +1123,8 @@ msgid "The driver failed to successfully initialize. Some functions may not comp
 msgstr "驱动未能成功初始化. 可能会有些功能无法正常工作"
 
 #: dbk32functions.rsthedriverthatiscurrentlyloaded
-msgid "The driver that is currently loaded belongs to a different version of Cheat Engine. Please unload this driver or reboot."
-msgstr "当前加载的驱动属于其他版本的 Cheat Engine. 请卸载这个驱动或重新启动系统."
+msgid "The driver that is currently loaded belongs to a different version of Reverie. Please unload this driver or reboot."
+msgstr "当前加载的驱动属于其他版本的 Reverie. 请卸载这个驱动或重新启动系统."
 
 #: dbk32functions.rstheservicecouldntgetopened
 msgid "The service couldn't get opened and also couldn't get created. Check if you have the needed rights to create a service, or call your system admin (Who'll probably beat you up for even trying this). Until this is fixed you won't be able to make use of the enhancements the driver gives you"
@@ -1135,8 +1135,8 @@ msgid "The ultimap service couldn't get opened and also couldn't get created.  (
 msgstr ""
 
 #: dbk32functions.rsyouaremissingthedriver
-msgid "You are missing the driver. Try reinstalling cheat engine, and try to disable your anti-virus before doing so."
-msgstr "你的驱动已丢失. 请重新安装 Cheat Engine, 并且在安装之前禁用杀毒软件."
+msgid "You are missing the driver. Try reinstalling Reverie, and try to disable your anti-virus before doing so."
+msgstr "你的驱动已丢失. 请重新安装 Reverie, 并且在安装之前禁用杀毒软件."
 
 #: dbk64secondaryloader.rserrorwhiletryingtoloadthedriveratpart
 msgid "Error while trying to load the driver at part "
@@ -1582,8 +1582,8 @@ msgid "bcrypt could not be used"
 msgstr "无法使用 bcrypt"
 
 #: feces.rscheatenginesignaturefiles
-msgid "Cheat engine signature files"
-msgstr "Cheat engine 签名文件"
+msgid "Reverie signature files"
+msgstr "Reverie 签名文件"
 
 #: feces.rscouldnotopenthealgorithmprovider
 msgid "Could not open the algorithm provider"
@@ -1640,8 +1640,8 @@ msgid "Failed to get the signature size"
 msgstr "无法获取签名大小"
 
 #: feces.rsfailedtoloadcheatenginepublickey
-msgid "Failed to load cheat engine public key"
-msgstr "无法加载cheat engine公匙"
+msgid "Failed to load Reverie public key"
+msgstr "无法加载Reverie公匙"
 
 #: feces.rsfailedtoloadprivatekey
 msgid "Failed to load private key"
@@ -1652,8 +1652,8 @@ msgid "Failed to load the table public key"
 msgstr "无法加载公匙表"
 
 #: feces.rsinvalidpublickey
-msgid "The provided public key is invalid(Not signed by the Cheat Engine guy). Remove the signature section to load this table"
-msgstr "提供的公匙是无效的(不是由 Cheat Engine 签名的). 移除签名部分以便加载此表单"
+msgid "The provided public key is invalid(Not signed by the Reverie guy). Remove the signature section to load this table"
+msgstr "提供的公匙是无效的(不是由 Reverie 签名的). 移除签名部分以便加载此表单"
 
 #: feces.rsispasswordcorrect
 msgid "Is the password correct?"
@@ -1668,8 +1668,8 @@ msgid "This table's signature does not contain a SignedHash element"
 msgstr "此表单的签名不包括SignedHash元素"
 
 #: feces.rsselectyourcheatenginesignaturefile
-msgid "Select your cheat engine signature file"
-msgstr "请选择你的cheat engine签名文件"
+msgid "Select your Reverie signature file"
+msgstr "请选择你的Reverie签名文件"
 
 #: feces.rsthistablehasbeenmodified
 msgid "This table has been modified. To load this table, remove the signature part with an editor (And check the file for suspicious things while you're at it)"
@@ -2275,16 +2275,16 @@ msgid "Plugins"
 msgstr "插件"
 
 #: formsettingsunit.rspopuphidecheatengine
-msgid "Popup/Hide cheat engine"
-msgstr "弹出/隐藏 Cheat Engine"
+msgid "Popup/Hide Reverie"
+msgstr "弹出/隐藏 Reverie"
 
 #: formsettingsunit.rsrequiresdbvm
 msgid "(Requires DBVM)"
 msgstr "(需要DBVM)"
 
 #: formsettingsunit.rsrestartce
-msgid "It is recommended to restart Cheat Engine for this change to take effect"
-msgstr "建议重新启动Cheat Engine以便使更改生效"
+msgid "It is recommended to restart Reverie for this change to take effect"
+msgstr "建议重新启动Reverie以便使更改生效"
 
 #: formsettingsunit.rsscansettings
 msgctxt "formsettingsunit.rsscansettings"
@@ -2368,8 +2368,8 @@ msgid "Unrandomizer"
 msgstr "禁止随机"
 
 #: formsettingsunit.rsyouhaventselectedanymemorytypethiswillresultinchea
-msgid "You haven't selected any memory type. This will result in Cheat Engine finding NO memory! Are you stupid?"
-msgstr "你还没有选择任何内存类型. 这将导致 Cheat Engine 无法找到内存! 你忘记了吗?"
+msgid "You haven't selected any memory type. This will result in Reverie finding NO memory! Are you stupid?"
+msgstr "你还没有选择任何内存类型. 这将导致 Reverie 无法找到内存! 你忘记了吗?"
 
 #: formsettingsunit.strprocesswatcherwillpreventunloader
 msgid "Enabling the process watcher will prevent the unloader from working"
@@ -2407,12 +2407,12 @@ msgid "Auto assembler"
 msgstr "自动汇编程序"
 
 #: frmautoinjectunit.rsceafilter
-msgid "Cheat Engine Assembly (*.CEA)|*.CEA|All Files ( *.* )|*.*"
-msgstr "Cheat Engine汇编 (*.CEA)|*.CEA|所有文件 (*.*)|*.*"
+msgid "Reverie Assembly (*.CEA)|*.CEA|All Files ( *.* )|*.*"
+msgstr "Reverie汇编 (*.CEA)|*.CEA|所有文件 (*.*)|*.*"
 
 #: frmautoinjectunit.rscegafilter
-msgid "Cheat Engine GNU Assembly (*.CEGA)|*.CEGA|All Files ( *.* )|*.*"
-msgstr "Cheat Engine GNU汇编 (*.CEGA)|*.CEGA|所有文件 ( *.* )|*.*"
+msgid "Reverie GNU Assembly (*.CEGA)|*.CEGA|All Files ( *.* )|*.*"
+msgstr "Reverie GNU汇编 (*.CEGA)|*.CEGA|所有文件 ( *.* )|*.*"
 
 #: frmautoinjectunit.rscodeinjecttemplate
 msgid "Code inject template"
@@ -3175,8 +3175,8 @@ msgid "%s is not a valid address"
 msgstr "%s不是一个有效的地址"
 
 #: frmsavememoryregionunit.rsnostartaddress
-msgid "If you don't include the header data you'll have to specify the startaddress yourself when loading the file(That means Cheat Engine wont fill in the startaddress text field when loaded for you)"
-msgstr "如果没有包含头部数据(header data)你就要在载入文件时自己指定起始地址 (这意味着 Cheat Engine 载入时不再自动填入起始地址)"
+msgid "If you don't include the header data you'll have to specify the startaddress yourself when loading the file(That means Reverie wont fill in the startaddress text field when loaded for you)"
+msgstr "如果没有包含头部数据(header data)你就要在载入文件时自己指定起始地址 (这意味着 Reverie 载入时不再自动填入起始地址)"
 
 #: frmsavememoryregionunit.rsnotallthememorywasreadablein
 msgid "Not all the memory was readable in"
@@ -3769,8 +3769,8 @@ msgid "Pause"
 msgstr "暂停"
 
 #: frmultimapunit.rsuupleaserunthe64bitversionofcheatenginetomakeuseofthisfeature
-msgid "Please run the 64-bit version of Cheat Engine to make use of this feature"
-msgstr "要使用到此特性请运行64位版本的Cheat Engine"
+msgid "Please run the 64-bit version of Reverie to make use of this feature"
+msgstr "要使用到此特性请运行64位版本的Reverie"
 
 #: frmultimapunit.rsuuresume
 msgid "Resume"
@@ -4088,7 +4088,7 @@ msgstr "createfoundlist 需要一个 memscan 对象作为参数"
 
 #: luahandler.rscheatengineisbeingafag
 msgid "Cheatengine is being a fag"
-msgstr "Cheat Engine 是个吃力的工作"
+msgstr "Reverie 是个吃力的工作"
 
 #: luahandler.rsconditionalbreakpointerror
 msgid "Conditional breakpoint error"
@@ -4294,8 +4294,8 @@ msgid "between %"
 msgstr "介于 % 之间"
 
 #: mainunit.rsbringscheatenginetofront
-msgid "brings Cheat Engine to front"
-msgstr "Cheat Engine 总在最前"
+msgid "brings Reverie to front"
+msgstr "Reverie 总在最前"
 
 #: mainunit.rsbusy
 msgid "<busy>"
@@ -4316,8 +4316,8 @@ msgid "Change value"
 msgstr "更改值"
 
 #: mainunit.rscheatengine
-msgid "Cheat Engine"
-msgstr "Cheat Engine"
+msgid "Reverie"
+msgstr "Reverie"
 
 #: mainunit.rschooselanguage
 msgid "Which language do you wish to use?"
@@ -4354,8 +4354,8 @@ msgid "Delete"
 msgstr "删除"
 
 #: mainunit.rsdoyouwanttogotothecheatenginewebsite
-msgid "Do you want to go to the Cheat Engine website?"
-msgstr "你想要访问 Cheat Engine 的网站吗?"
+msgid "Do you want to go to the Reverie website?"
+msgstr "你想要访问 Reverie 的网站吗?"
 
 #: mainunit.rsdoyouwanttoprotectthistrainerfilefromediting
 msgid "Do you want to protect this trainer file from editing?"
@@ -4488,8 +4488,8 @@ msgid "Language"
 msgstr "语言"
 
 #: mainunit.rslicenseexpired
-msgid "Your license to use Cheat Engine has expired. You can buy a license to use cheat engine for 1 month for $200, 6 months for only $1000 and for 1 year for only $1800. If you don't renew your license Cheat Engine will be severely limited in it's abilities. (e.g: Next scan has been disabled)"
-msgstr "Cheat Engine 授权已过期. 你可以购买授权, 每月 $200, 6个月只需 $1000, 1年仅需 $1800. 如果不延长有效期软件将在功能上受到严格的限制. (如: 无法使用再次扫描)"
+msgid "Your license to use Reverie has expired. You can buy a license to use Reverie for 1 month for $200, 6 months for only $1000 and for 1 year for only $1800. If you don't renew your license Reverie will be severely limited in it's abilities. (e.g: Next scan has been disabled)"
+msgstr "Reverie 授权已过期. 你可以购买授权, 每月 $200, 6个月只需 $1000, 1年仅需 $1800. 如果不延长有效期软件将在功能上受到严格的限制. (如: 无法使用再次扫描)"
 
 #: mainunit.rsloadtheassociatedtable
 msgid "Load the associated table? (%s)"
@@ -4610,8 +4610,8 @@ msgid "Terminating scan..."
 msgstr "终止扫描..."
 
 #: mainunit.rsthankyoufortryingoutcheatenginebecauseithasexpired
-msgid "Thank you for trying out Cheat Engine. Because it has expired Cheat Engine will now close. Is that ok with you?"
-msgstr "感谢你试用 Cheat Engine, 由于 Cheat Engine 已过期即将关闭. 你没问题吧?"
+msgid "Thank you for trying out Reverie. Because it has expired Reverie will now close. Is that ok with you?"
+msgstr "感谢你试用 Reverie, 由于 Reverie 已过期即将关闭. 你没问题吧?"
 
 #: mainunit.rstheprocessisntfullyopenedindicatingainvalidprocess
 msgid "The process isn't fully opened. Indicating a invalid ProcessID. You still want to find out the EPROCESS? (BSOD is possible)"
@@ -4642,8 +4642,8 @@ msgid "Do you want to try out the tutorial?"
 msgstr "你想要尝试教程?"
 
 #: mainunit.rsunabletoscanfixyourscansettings
-msgid "Unable to scan. Fix your scan settings and restart cheat engine"
-msgstr "不能扫描.修复你的扫描设置并重新启动cheat engine"
+msgid "Unable to scan. Fix your scan settings and restart Reverie"
+msgstr "不能扫描.修复你的扫描设置并重新启动Reverie"
 
 #: mainunit.rsunrandomizerinfo
 msgid "This will scan for and change some routines that are commonly used to generate a random value so they always return the same. Please be aware that there is a chance it overwrites the wrong routines causing the program to crash, or that the program uses an unknown random generator. Continue?"
@@ -4729,8 +4729,8 @@ msgid "Change script"
 msgstr "更改脚本"
 
 #: mainunit.strclicktogohome
-msgid "Click here to go to the Cheat Engine homepage"
-msgstr "单击这里来转动Cheat Engine主页"
+msgid "Click here to go to the Reverie homepage"
+msgstr "单击这里来转动Reverie主页"
 
 #: mainunit.strconfirmprocesstermination
 msgid "This will close the current process. Are you sure you want to do this?"
@@ -4757,8 +4757,8 @@ msgid "Disable cheat"
 msgstr "停用金手指"
 
 #: mainunit.strdontbother
-msgid "Don't even bother. Cheat Engine uses the main thread to receive messages when the scan is done, freeze it and CE will crash!"
-msgstr "不要动它. Cheat Engine 扫描完毕时使用主线程接收消息, 锁定它会使 CE 崩溃!"
+msgid "Don't even bother. Reverie uses the main thread to receive messages when the scan is done, freeze it and CE will crash!"
+msgstr "不要动它. Reverie 扫描完毕时使用主线程接收消息, 锁定它会使 CE 崩溃!"
 
 #: mainunit.strenablecheat
 msgid "Enable cheat"
@@ -4787,8 +4787,8 @@ msgid "Freeze all addresses in this list"
 msgstr "锁定列表中所有地址"
 
 #: mainunit.strfuture
-msgid "Wow,I never imagined people would use Cheat Engine up to today"
-msgstr "呵呵,我没想到今天大家仍在使用 Cheat Engine"
+msgid "Wow,I never imagined people would use Reverie up to today"
+msgstr "呵呵,我没想到今天大家仍在使用 Reverie"
 
 #: mainunit.strhappybirthday
 msgid "Let's sing Happy Birthday for Dark Byte today!"
@@ -4948,7 +4948,7 @@ msgstr "圣诞快乐和新年快乐"
 
 #: mainunit2.cename
 msgctxt "mainunit2.cename"
-msgid "Cheat Engine 6.8.2"
+msgid "Reverie 6.8.2"
 msgstr ""
 
 #: mainunit2.rsenabledisablespeedhack
@@ -5300,7 +5300,7 @@ msgid "Please specify the new symbol searchpath (; separates paths)"
 msgstr "请指定新的符号搜索路径 (使用 ; 分隔路径)"
 
 #: memorybrowserformunit.rspleasetargetanotherprocess
-msgid "Start another version of Cheat Engine and attach to that instead"
+msgid "Start another version of Reverie and attach to that instead"
 msgstr "启动另一个版本的CE,并用其替代附加"
 
 #: memorybrowserformunit.rspleasetargetaprocessfirst
@@ -5488,8 +5488,8 @@ msgid "Nothing to scan for"
 msgstr "没有扫描"
 
 #: memscan.rsmsthescanwasforcedtoterminatesubsequentscansmaynotfunctionproperlyetc
-msgid "The scan was forced to terminate. Subsequent scans may not function properly. It's recommended to restart Cheat Engine"
-msgstr "扫描被迫终止. 继续扫描有可能不会正常工作. 建议重新启动 Cheat Engine"
+msgid "The scan was forced to terminate. Subsequent scans may not function properly. It's recommended to restart Reverie"
+msgstr "扫描被迫终止. 继续扫描有可能不会正常工作. 建议重新启动 Reverie"
 
 #: memscan.rsmstupidalignsize
 msgid "Stupid alignsize"
@@ -5613,8 +5613,8 @@ msgid "The lua script in this trainer has some issues and will therefore not loa
 msgstr ""
 
 #: opensave.rsosthereisanewerversionifcheatengineoutetc
-msgid "There is a newer version of Cheat Engine out. It's recommended to use that version instead"
-msgstr "由新版本的 Cheat Engine 生成. 推荐更新到最新版本"
+msgid "There is a newer version of Reverie out. It's recommended to use that version instead"
+msgstr "由新版本的 Reverie 生成. 推荐更新到最新版本"
 
 #: opensave.rsosthischeattableiscorrupt
 msgid "This cheat table is corrupt"
@@ -5650,8 +5650,8 @@ msgid "You can only protect a file if it has an .CETRAINER extension"
 msgstr "你只能保护以 .CETRAINER 为扩展名的文件"
 
 #: opensave.strcantloadfilepatcher
-msgid "The file patcher can't be loaded by Cheat Engine!"
-msgstr "Cheat Engine 无法载入补丁文件!"
+msgid "The file patcher can't be loaded by Reverie!"
+msgstr "Reverie 无法载入补丁文件!"
 
 #: opensave.strcantloadprotectedfile
 msgid "This trainer is protected from being opened by CE. Now go away!!!"
@@ -5662,16 +5662,16 @@ msgid "The icon has been corrupted"
 msgstr "图标已被损坏"
 
 #: opensave.strnotacetrainer
-msgid "This is not a trainer made by Cheat Engine (If it is a trainer at all!)"
-msgstr "这不是 Cheat Engine 制作的修改器 (如果你能确认它是修改器的话)"
+msgid "This is not a trainer made by Reverie (If it is a trainer at all!)"
+msgstr "这不是 Reverie 制作的修改器 (如果你能确认它是修改器的话)"
 
 #: opensave.strunknowncomponent
 msgid "There is a unknown component in the trainer! compnr="
 msgstr "修改器存在未知成分! compnr="
 
 #: opensave.strunknowntrainerversion
-msgid "This version of Cheat Engine doesn't know how to read this trainer! Trainerversion="
-msgstr "当前 Cheat Engine 的版本不能载入修改器. 修改器版本="
+msgid "This version of Reverie doesn't know how to read this trainer! Trainerversion="
+msgstr "当前 Reverie 的版本不能载入修改器. 修改器版本="
 
 #: parsers.rsinvalidinteger
 msgid "Invalid integer"
@@ -7151,8 +7151,8 @@ msgstr "分析数据"
 
 #: structuresfrm.rsdoyouwantcheatenginetotryandfillinthemostbasictype
 msgctxt "structuresfrm.rsdoyouwantcheatenginetotryandfillinthemostbasictype"
-msgid "Do you want Cheat Engine to try and fill in the most basic types of the struct using the current address?"
-msgstr "你希望 Cheat Engine 使用当前地址尝试填入结构的最基本类型?"
+msgid "Do you want Reverie to try and fill in the most basic types of the struct using the current address?"
+msgstr "你希望 Reverie 使用当前地址尝试填入结构的最基本类型?"
 
 #: structuresfrm.rsfirstselectastructureyouwanttomodifyordefine
 msgctxt "structuresfrm.rsfirstselectastructureyouwanttomodifyordefine"
@@ -7280,8 +7280,8 @@ msgstr "哪一群组要设置这个地址?"
 
 #: structuresfrm.rswrongversion
 msgctxt "structuresfrm.rswrongversion"
-msgid "This structure file was generated with a newer version of Cheat Engine. (That means there's more than likely a new version so please update....)"
-msgstr "结构文件由新版本的 Cheat Engine 制作. (这意味着升级更新....)"
+msgid "This structure file was generated with a newer version of Reverie. (That means there's more than likely a new version so please update....)"
+msgstr "结构文件由新版本的 Reverie 制作. (这意味着升级更新....)"
 
 #: structuresfrm2.rs2bytewithvalue2
 msgid "2 Byte: %s"
@@ -7348,8 +7348,8 @@ msgstr "分析数据"
 
 #: structuresfrm2.rsdoyouwantcheatenginetotryandfillinthemostbasictype
 msgctxt "structuresfrm2.rsdoyouwantcheatenginetotryandfillinthemostbasictype"
-msgid "Do you want Cheat Engine to try and fill in the most basic types of the struct using the current address?"
-msgstr "你希望 Cheat Engine 填写结构的最基本类型时使用当前的地址吗?"
+msgid "Do you want Reverie to try and fill in the most basic types of the struct using the current address?"
+msgstr "你希望 Reverie 填写结构的最基本类型时使用当前的地址吗?"
 
 #: structuresfrm2.rsfirstselectastructureyouwanttomodifyordefine
 msgctxt "structuresfrm2.rsfirstselectastructureyouwanttomodifyordefine"
@@ -7684,8 +7684,8 @@ msgstr "设置目前地址在哪一群组?"
 
 #: structuresfrm2.rswrongversion
 msgctxt "structuresfrm2.rswrongversion"
-msgid "This structure file was generated with a newer version of Cheat Engine. (That means there's more than likely a new version so please update....)"
-msgstr "结构文件由新版本的 Cheat Engine 制作. (这意味着升级更新....)"
+msgid "This structure file was generated with a newer version of Reverie. (That means there's more than likely a new version so please update....)"
+msgstr "结构文件由新版本的 Reverie 制作. (这意味着升级更新....)"
 
 #: symbolconfigunit.rsareyousureyouwanttoremoveallsymbolsfromthelist
 msgid "Are you sure you want to remove all symbols from the list?"
@@ -7728,8 +7728,8 @@ msgid "You can't change this setting at the moment"
 msgstr "你现在不能改变当前设置"
 
 #: tableconverter.rstoooldtable
-msgid "This table is too old to be used. Get Cheat engine 5.6 and open/resave this table"
-msgstr "生成表单的版本过于陈旧. 只能转换 Cheat Engine 5.6 以上版本生成的表单"
+msgid "This table is too old to be used. Get Reverie 5.6 and open/resave this table"
+msgstr "生成表单的版本过于陈旧. 只能转换 Reverie 5.6 以上版本生成的表单"
 
 #: tformsettings.aboutlabel.caption
 msgid "About CE"
@@ -7797,8 +7797,8 @@ msgid "Delete"
 msgstr "删除"
 
 #: tformsettings.caption
-msgid "Cheat Engine settings"
-msgstr "Cheat Engine设置"
+msgid "Reverie settings"
+msgstr "Reverie设置"
 
 #: tformsettings.cballocsaddtowatchedregions.caption
 msgid "Automatically add allocated memory by CE as watched regions"
@@ -7831,7 +7831,7 @@ msgid "Ability to step through kernel code"
 msgstr "单步调试内核代码的能力"
 
 #: tformsettings.cbcenteronpopup.caption
-msgid "Center Cheat Engine when bringing to front"
+msgid "Center Reverie when bringing to front"
 msgstr "单步调试内核代码的能力"
 
 #: tformsettings.cbdontopenhandle.caption
@@ -7859,8 +7859,8 @@ msgid "Handle beakpoints not caused by CE"
 msgstr "处理非CE引起的中断"
 
 #: tformsettings.cbhideallwindows.caption
-msgid "Hide some/all windows instead of trying to bring cheat engine to front"
-msgstr "Cheat Engine 置前时隐藏部分或全部的窗口"
+msgid "Hide some/all windows instead of trying to bring Reverie to front"
+msgstr "Reverie 置前时隐藏部分或全部的窗口"
 
 #: tformsettings.cbincremental.caption
 msgid "Incremental value"
@@ -8069,24 +8069,24 @@ msgid "1024"
 msgstr "1024"
 
 #: tformsettings.editfreezeinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before resetting the frozen addresses to their original value."
-msgstr "Cheat Engine 等候锁定的地址重置为初始值之间的间隔(毫秒)."
+msgid "The number of milliseconds that Reverie will wait before resetting the frozen addresses to their original value."
+msgstr "Reverie 等候锁定的地址重置为初始值之间的间隔(毫秒)."
 
 #: tformsettings.editfreezeinterval.text
 msgid "100"
 msgstr "100"
 
 #: tformsettings.editupdatefoundinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before refreshing the list of found addresses"
-msgstr "Cheat Engine 刷新地址列表间隔时间(毫秒)"
+msgid "The number of milliseconds that Reverie will wait before refreshing the list of found addresses"
+msgstr "Reverie 刷新地址列表间隔时间(毫秒)"
 
 #: tformsettings.editupdatefoundinterval.text
 msgid "1000"
 msgstr "1000"
 
 #: tformsettings.editupdateinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before refreshing the list of addresses"
-msgstr "Cheat Engine 刷新地址列表间隔时间(毫秒)"
+msgid "The number of milliseconds that Reverie will wait before refreshing the list of addresses"
+msgstr "Reverie 刷新地址列表间隔时间(毫秒)"
 
 #: tformsettings.editupdateinterval.text
 msgctxt "tformsettings.editupdateinterval.text"
@@ -8658,7 +8658,7 @@ msgstr "重新计算新的地址"
 
 #: tmainform.caption
 msgctxt "tmainform.caption"
-msgid "Cheat Engine 6.8.2"
+msgid "Reverie 6.8.2"
 msgstr ""
 
 #: tmainform.cbcasesensitive.caption
@@ -8897,8 +8897,8 @@ msgid "Memory Scan Options"
 msgstr "内存扫描选项"
 
 #: tmainform.helpindex1.caption
-msgid "Cheat Engine Help"
-msgstr "Cheat Engine 帮助"
+msgid "Reverie Help"
+msgstr "Reverie 帮助"
 
 #: tmainform.hint
 msgid " "
@@ -8960,12 +8960,12 @@ msgid "Select All"
 msgstr "选择所有"
 
 #: tmainform.menuitem12.caption
-msgid "Cheat Engine Tutorial (64-Bit)"
-msgstr "Cheat Engine教程(64位)"
+msgid "Reverie Tutorial (64-Bit)"
+msgstr "Reverie教程(64位)"
 
 #: tmainform.menuitem15.caption
-msgid "Cheat Engine Tutorial Games"
-msgstr "Cheat Engine教程游戏"
+msgid "Reverie Tutorial Games"
+msgstr "Reverie教程游戏"
 
 #: tmainform.menuitem2.caption
 msgid "New Item1"
@@ -9282,8 +9282,8 @@ msgid "Table"
 msgstr "表单"
 
 #: tmainform.mitutorial.caption
-msgid "Cheat Engine Tutorial"
-msgstr "Cheat Engine教程"
+msgid "Reverie Tutorial"
+msgstr "Reverie教程"
 
 #: tmainform.miundovalue.caption
 msgid "Undo last edit"
@@ -9345,8 +9345,8 @@ msgid "No Process Selected"
 msgstr "没有选择进程"
 
 #: tmainform.progressbar.hint
-msgid "This shows how far Cheat Engine is with searching"
-msgstr "这里显示 Cheat Engine 搜索的进度"
+msgid "This shows how far Reverie is with searching"
+msgstr "这里显示 Reverie 搜索的进度"
 
 #: tmainform.rbbit.caption
 msgid "Bits"
@@ -9525,8 +9525,8 @@ msgid "Design userinterface manually"
 msgstr "用户自行设计界面"
 
 #: trainergenerator.rsdontsupportcheatengineoryourself
-msgid "Don't support Cheat Engine (or yourself)"
-msgstr "不支持 Cheat Engine (可自行设计界面)"
+msgid "Don't support Reverie (or yourself)"
+msgstr "不支持 Reverie (可自行设计界面)"
 
 #: trainergenerator.rsdosomethingwith
 msgid "Do something with"
@@ -9557,7 +9557,7 @@ msgid "The current trainer form does not have a panel named 'CHEATPANEL' so can 
 msgstr "当前修改器中没有一个名为 'CHEATPANEL' 的层, 所以无法自动制作修改器. %s你想要从头开始吗? (如果你想重新创建一个脚本, 你可以保存当前脚本到 .EXE 中, 而不是使用修改器自动生成器)"
 
 #: trainergenerator.rsonclosewarning
-msgid "This form had an onClose event. Good thing this was only a stub, else Cheat Engine would have terminated"
+msgid "This form had an onClose event. Good thing this was only a stub, else Reverie would have terminated"
 msgstr "这窗口有onClose事件,幸好这只是一个存根(stub),否则CE将会终止"
 
 #: trainergenerator.rspleaseselecttypeinaprocessname
@@ -9691,8 +9691,8 @@ msgid "2 Bytes"
 msgstr "2字节"
 
 #: vehdebugger.rscheatenginefailedtogetintotheconfig
-msgid "Cheat Engine failed to get into the config of the selected program. (Error=%s)"
-msgstr "Cheat Engine 无法获取所选择的配置方案. (错误=%s)"
+msgid "Reverie failed to get into the config of the selected program. (Error=%s)"
+msgstr "Reverie 无法获取所选择的配置方案. (错误=%s)"
 
 #: vehdebugger.rserrorwhiletryingtocreatetheconfigurationstructure
 msgid "Error while trying to create the configuration structure! (Which effectively renders this whole feature useless) Errorcode=%s"

@@ -12,7 +12,7 @@ msgstr ""
 "Language: zh_TW\n"
 "X-Generator: Poedit 3.0\n"
 
-msgid "Most commonly used for stacks where stack pointers point to it's own structureTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notDon't care if it's executable or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDownside: The game may become slightly slower when using these functions. (Of course, if it has been hammering the gui, it would already have been frozen)<WARNING: SLOW and recommended as last resort><WARNING: SLOW and recommended as last resort><WARNING: SLOW and recommended as last resort>Note: Due to the way the processing is done, trace data will still be written to disk during the processing. If you generate more data than can be processed at a time, the filesize will keep growing. You can combine this with the \"Pause target while processing\" option so that it shouldn't generate too much dataNote: Due to the way the processing is done, trace data will still be written to disk during the processing. If you generate more data than can be processed at a time, the filesize will keep growing. You can combine this with the \"Pause target while processing\" option so that it shouldn't generate too much dataTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or not"
+msgid "Most commonly used for stacks where stack pointers point to it's own structureTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notDon't care if it's executable or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDownside: The game may become slightly slower when using these functions. (Of course, if it has been hammering the gui, it would already have been frozen)<WARNING: SLOW and recommended as last resort><WARNING: SLOW and recommended as last resort><WARNING: SLOW and recommended as last resort>Note: Due to the way the processing is done, trace data will still be written to disk during the processing. If you generate more data than can be processed at a time, the filesize will keep growing. You can combine this with the \"Pause target while processing\" option so that it shouldn't generate too much dataNote: Due to the way the processing is done, trace data will still be written to disk during the processing. If you generate more data than can be processed at a time, the filesize will keep growing. You can combine this with the \"Pause target while processing\" option so that it shouldn't generate too much dataTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notTip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or notDon't care if it's executable or not"
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
 #: aboutunit.rsareyousureyouwanttolaunchdbvm
@@ -33,7 +33,7 @@ msgstr "這表示您尚未執行 DBVM，但您的電腦能夠執行"
 
 #: aboutunit.rsthismeansthatyoursystemisrunningdbvm
 msgid "This means that your system is running dbvm. This means ce will make use of some advanced tools that are otherwise unavailable"
-msgstr "這表示您的系統正在執行 DBVM。Cheat Engine 能夠使用某些進階工具"
+msgstr "這表示您的系統正在執行 DBVM。Reverie 能夠使用某些進階工具"
 
 #: aboutunit.rsthismeansthatyouwillneedanewcpuinteltobeabletouset
 msgid "This means that you will need a new cpu (intel) to be able to use the advanced dbvm options"
@@ -164,7 +164,7 @@ msgid "This is not a valid address"
 msgstr "這不是有效的位址"
 
 #: advancedoptionsunit.rsaocheatenginefailedtogetintotheconfigofselectedprogram
-msgid "Cheat Engine failed to get into the config of the selected program."
+msgid "Reverie failed to get into the config of the selected program."
 msgstr ""
 
 #: advancedoptionsunit.rsaoerrorwhiletryingtocreatethesharedkeystructureetc
@@ -738,15 +738,15 @@ msgid "I couldn't attach the debugger to this process! You could try to open the
 msgstr ""
 
 #: cedebugger.rsdonotclosece
-msgid "If you close Cheat Engine while the game is running, the game will close too. Are you sure you want to do this?"
-msgstr "如果您在遊戲仍在運行時關閉 Cheat Engine，遊戲也會跟著一起關閉。您確定要這麼做嗎？"
+msgid "If you close Reverie while the game is running, the game will close too. Are you sure you want to do this?"
+msgstr "如果您在遊戲仍在運行時關閉 Reverie，遊戲也會跟著一起關閉。您確定要這麼做嗎？"
 
 #: cedebugger.rspleasetargetanotherprocess
 msgid "Please target another process"
 msgstr ""
 
 #: cedebugger.rsthiswillattachthedebuggerofcheatenginetothecurrent
-msgid "This will attach the debugger of Cheat Engine to the current process."
+msgid "This will attach the debugger of Reverie to the current process."
 msgstr ""
 
 #: cedebugger.rsyoumustfirstopenaprocess
@@ -1135,8 +1135,8 @@ msgid "The driver failed to load due to signing issues. If you have secure boot 
 msgstr ""
 
 #: dbk32functions.rspleaserunthe64bitversionofce
-msgid "Please run the 64-bit version of Cheat Engine"
-msgstr "請執行 64 位元版本的 Cheat Engine"
+msgid "Please run the 64-bit version of Reverie"
+msgstr "請執行 64 位元版本的 Reverie"
 
 #: dbk32functions.rsthedrivercouldntbeopened
 msgid "The driver couldn't be opened! It's not loaded or not responding. Luckely you are running dbvm so it's not a total waste. Do you wish to force load the driver?"
@@ -1151,7 +1151,7 @@ msgid "The driver failed to successfully initialize. Some functions may not comp
 msgstr "驅動程式初始化失敗。某些功能可能無法運作"
 
 #: dbk32functions.rsthedriverthatiscurrentlyloaded
-msgid "The driver that is currently loaded belongs to a different version of Cheat Engine. Please unload this driver or reboot."
+msgid "The driver that is currently loaded belongs to a different version of Reverie. Please unload this driver or reboot."
 msgstr ""
 
 #: dbk32functions.rstheservicecouldntgetopened
@@ -1163,8 +1163,8 @@ msgid "The ultimap service couldn't get opened and also couldn't get created.  (
 msgstr ""
 
 #: dbk32functions.rsyouaremissingthedriver
-msgid "You are missing the driver. Try reinstalling cheat engine, and try to disable your anti-virus before doing so."
-msgstr "驅動程式遺失。請先停用防毒軟體，並重新安裝 Cheat Engine。"
+msgid "You are missing the driver. Try reinstalling Reverie, and try to disable your anti-virus before doing so."
+msgstr "驅動程式遺失。請先停用防毒軟體，並重新安裝 Reverie。"
 
 #: dbk64secondaryloader.rserrorwhiletryingtoloadthedriveratpart
 msgid "Error while trying to load the driver at part "
@@ -1685,8 +1685,8 @@ msgid "bcrypt could not be used"
 msgstr "無法使用 bcrypt"
 
 #: feces.rscheatenginesignaturefiles
-msgid "Cheat engine signature files"
-msgstr "Cheat Engine 簽名檔"
+msgid "Reverie signature files"
+msgstr "Reverie 簽名檔"
 
 #: feces.rscouldnotopenthealgorithmprovider
 msgid "Could not open the algorithm provider"
@@ -1743,7 +1743,7 @@ msgid "Failed to get the signature size"
 msgstr ""
 
 #: feces.rsfailedtoloadcheatenginepublickey
-msgid "Failed to load cheat engine public key"
+msgid "Failed to load Reverie public key"
 msgstr ""
 
 #: feces.rsfailedtoloadprivatekey
@@ -1755,7 +1755,7 @@ msgid "Failed to load the table public key"
 msgstr ""
 
 #: feces.rsinvalidpublickey
-msgid "The provided public key is invalid(Not signed by the Cheat Engine guy). Remove the signature section to load this table"
+msgid "The provided public key is invalid(Not signed by the Reverie guy). Remove the signature section to load this table"
 msgstr ""
 
 #: feces.rsispasswordcorrect
@@ -1771,7 +1771,7 @@ msgid "This table's signature does not contain a SignedHash element"
 msgstr ""
 
 #: feces.rsselectyourcheatenginesignaturefile
-msgid "Select your cheat engine signature file"
+msgid "Select your Reverie signature file"
 msgstr ""
 
 #: feces.rsthistablehasbeenmodified
@@ -2423,7 +2423,7 @@ msgid "Plugins"
 msgstr "外掛程式"
 
 #: formsettingsunit.rspopuphidecheatengine
-msgid "Popup/Hide cheat engine"
+msgid "Popup/Hide Reverie"
 msgstr ""
 
 #: formsettingsunit.rsrequiresdbvm
@@ -2431,8 +2431,8 @@ msgid "(Requires DBVM)"
 msgstr "(需要 DBVM)"
 
 #: formsettingsunit.rsrestartce
-msgid "It is recommended to restart Cheat Engine for this change to take effect"
-msgstr "建議重新啟動 Cheat Engine 以套用此變更"
+msgid "It is recommended to restart Reverie for this change to take effect"
+msgstr "建議重新啟動 Reverie 以套用此變更"
 
 #: formsettingsunit.rsscansettings
 msgctxt "formsettingsunit.rsscansettings"
@@ -2520,8 +2520,8 @@ msgid "Unrandomizer"
 msgstr "去隨機器"
 
 #: formsettingsunit.rsyouhaventselectedanymemorytypethiswillresultinchea
-msgid "You haven't selected any memory type. This will result in Cheat Engine finding NO memory! Are you stupid?"
-msgstr "你尚未選擇任何記憶體類型。Cheat Engine 將無法找到任何記憶體。你認真？"
+msgid "You haven't selected any memory type. This will result in Reverie finding NO memory! Are you stupid?"
+msgstr "你尚未選擇任何記憶體類型。Reverie 將無法找到任何記憶體。你認真？"
 
 #: formsettingsunit.strprocesswatcherwillpreventunloader
 msgid "Enabling the process watcher will prevent the unloader from working"
@@ -2559,11 +2559,11 @@ msgid "Auto assembler"
 msgstr "自動組譯器"
 
 #: frmautoinjectunit.rsceafilter
-msgid "Cheat Engine Assembly (*.CEA)|*.CEA|All Files ( *.* )|*.*"
+msgid "Reverie Assembly (*.CEA)|*.CEA|All Files ( *.* )|*.*"
 msgstr ""
 
 #: frmautoinjectunit.rscegafilter
-msgid "Cheat Engine GNU Assembly (*.CEGA)|*.CEGA|All Files ( *.* )|*.*"
+msgid "Reverie GNU Assembly (*.CEGA)|*.CEGA|All Files ( *.* )|*.*"
 msgstr ""
 
 #: frmautoinjectunit.rscodeinjecttemplate
@@ -3382,7 +3382,7 @@ msgid "%s is not a valid address"
 msgstr "%s 不是有效的位址"
 
 #: frmsavememoryregionunit.rsnostartaddress
-msgid "If you don't include the header data you'll have to specify the startaddress yourself when loading the file(That means Cheat Engine wont fill in the startaddress text field when loaded for you)"
+msgid "If you don't include the header data you'll have to specify the startaddress yourself when loading the file(That means Reverie wont fill in the startaddress text field when loaded for you)"
 msgstr ""
 
 #: frmsavememoryregionunit.rsnotallthememorywasreadablein
@@ -3649,7 +3649,7 @@ msgstr "鎖定"
 
 #: frmstructurecompareunit.rsspsneednewce
 msgid "You'll need a newer CE version to open this file"
-msgstr "您需要新版的 Cheat Engine 才能開啟此檔案"
+msgstr "您需要新版的 Reverie 才能開啟此檔案"
 
 #: frmstructurecompareunit.rsspsnoerror
 msgid "No error"
@@ -3993,8 +3993,8 @@ msgid "Pause"
 msgstr "暫停"
 
 #: frmultimapunit.rsuupleaserunthe64bitversionofcheatenginetomakeuseofthisfeature
-msgid "Please run the 64-bit version of Cheat Engine to make use of this feature"
-msgstr "請執行 64 位元版本的 Cheat Engine 以使用此功能"
+msgid "Please run the 64-bit version of Reverie to make use of this feature"
+msgstr "請執行 64 位元版本的 Reverie 以使用此功能"
 
 #: frmultimapunit.rsuuresume
 msgctxt "frmultimapunit.rsuuresume"
@@ -4552,7 +4552,7 @@ msgid "between %"
 msgstr "介於 %"
 
 #: mainunit.rsbringscheatenginetofront
-msgid "brings Cheat Engine to front"
+msgid "brings Reverie to front"
 msgstr ""
 
 #: mainunit.rsbusy
@@ -4566,7 +4566,7 @@ msgstr "取消"
 
 #: mainunit.rsceerror
 msgid "CE Error:"
-msgstr "Cheat Engine 錯誤："
+msgstr "Reverie 錯誤："
 
 #: mainunit.rschangevalue
 msgctxt "mainunit.rschangevalue"
@@ -4575,8 +4575,8 @@ msgstr "修改數值"
 
 #: mainunit.rscheatengine
 msgctxt "mainunit.rscheatengine"
-msgid "Cheat Engine"
-msgstr "Cheat Engine"
+msgid "Reverie"
+msgstr "Reverie"
 
 #: mainunit.rschooselanguage
 msgid "Which language do you wish to use?"
@@ -4626,8 +4626,8 @@ msgid "Do you want a header with address support ?"
 msgstr ""
 
 #: mainunit.rsdoyouwanttogotothecheatenginewebsite
-msgid "Do you want to go to the Cheat Engine website?"
-msgstr "您要前往 Cheat Engine 的網站嗎？"
+msgid "Do you want to go to the Reverie website?"
+msgstr "您要前往 Reverie 的網站嗎？"
 
 #: mainunit.rsdoyouwanttoprotectthistrainerfilefromediting
 msgid "Do you want to protect this trainer file from editing?"
@@ -4761,8 +4761,8 @@ msgid "Language"
 msgstr "語言"
 
 #: mainunit.rslicenseexpired
-msgid "Your license to use Cheat Engine has expired. You can buy a license to use cheat engine for 1 month for $200, 6 months for only $1000 and for 1 year for only $1800. If you don't renew your license Cheat Engine will be severely limited in it's abilities. (e.g: Next scan has been disabled)"
-msgstr "您的 Cheat Engine 使用授權已經過期了。您可以選擇以 200 美金購買 1 個月的使用授權，6 個月只要 1000 美金，而 1 年的使用授權只需要 1800 美金。如果您不續訂的話，Cheat Engine 的功能會大幅受限 (繼續掃描按鈕已經被停用了)。"
+msgid "Your license to use Reverie has expired. You can buy a license to use Reverie for 1 month for $200, 6 months for only $1000 and for 1 year for only $1800. If you don't renew your license Reverie will be severely limited in it's abilities. (e.g: Next scan has been disabled)"
+msgstr "您的 Reverie 使用授權已經過期了。您可以選擇以 200 美金購買 1 個月的使用授權，6 個月只要 1000 美金，而 1 年的使用授權只需要 1800 美金。如果您不續訂的話，Reverie 的功能會大幅受限 (繼續掃描按鈕已經被停用了)。"
 
 #: mainunit.rsloadtheassociatedtable
 msgid "Load the associated table? (%s)"
@@ -4902,8 +4902,8 @@ msgid "Terminating scan..."
 msgstr "終止掃描中..."
 
 #: mainunit.rsthankyoufortryingoutcheatenginebecauseithasexpired
-msgid "Thank you for trying out Cheat Engine. Because it has expired Cheat Engine will now close. Is that ok with you?"
-msgstr "感謝您試用 Cheat Engine。由於您的授權已過期，Cheat Engine 即將關閉。您接受嗎？"
+msgid "Thank you for trying out Reverie. Because it has expired Reverie will now close. Is that ok with you?"
+msgstr "感謝您試用 Reverie。由於您的授權已過期，Reverie 即將關閉。您接受嗎？"
 
 #: mainunit.rstheprocessisntfullyopenedindicatingainvalidprocess
 msgid "The process isn't fully opened. Indicating a invalid ProcessID. You still want to find out the EPROCESS? (BSOD is possible)"
@@ -4934,8 +4934,8 @@ msgid "Do you want to try out the tutorial?"
 msgstr "您要試試新手教學嗎？"
 
 #: mainunit.rsunabletoscanfixyourscansettings
-msgid "Unable to scan. Fix your scan settings and restart cheat engine"
-msgstr "無法掃描。請修復您的掃描設定並重啟 Cheat Engine"
+msgid "Unable to scan. Fix your scan settings and restart Reverie"
+msgstr "無法掃描。請修復您的掃描設定並重啟 Reverie"
 
 #: mainunit.rsunrandomizerinfo
 msgid "This will scan for and change some routines that are commonly used to generate a random value so they always return the same. Please be aware that there is a chance it overwrites the wrong routines causing the program to crash, or that the program uses an unknown random generator. Continue?"
@@ -4955,7 +4955,7 @@ msgstr ""
 
 #: mainunit.rswhatareyousayingyouregoingtocontinueusingceillegal
 msgid "WHAT!!! Are you saying you're going to continue using CE ILLEGALLY??? If you say yes, i'm going to mail the cops to get you and send you to jail!!!"
-msgstr "什麼？？？你是說你要繼續非法的使用 Cheat Engine 嗎？？？如果是的話，我就要叫警察把你抓走然後送進監獄了！！！"
+msgstr "什麼？？？你是說你要繼續非法的使用 Reverie 嗎？？？如果是的話，我就要叫警察把你抓走然後送進監獄了！！！"
 
 #: mainunit.rswhatdoyouwantthegroupnametobe
 msgid "What do you want the groupname to be?"
@@ -5021,8 +5021,8 @@ msgid "Change script"
 msgstr ""
 
 #: mainunit.strclicktogohome
-msgid "Click here to go to the Cheat Engine homepage"
-msgstr "點擊此處以前往 Cheat Engine 的網頁"
+msgid "Click here to go to the Reverie homepage"
+msgstr "點擊此處以前往 Reverie 的網頁"
 
 #: mainunit.strconfirmprocesstermination
 msgid "This will close the current process. Are you sure you want to do this?"
@@ -5049,7 +5049,7 @@ msgid "Disable cheat"
 msgstr "停用作弊"
 
 #: mainunit.strdontbother
-msgid "Don't even bother. Cheat Engine uses the main thread to receive messages when the scan is done, freeze it and CE will crash!"
+msgid "Don't even bother. Reverie uses the main thread to receive messages when the scan is done, freeze it and CE will crash!"
 msgstr ""
 
 #: mainunit.strenablecheat
@@ -5083,7 +5083,7 @@ msgid "Freeze all addresses in this list"
 msgstr "凍結此列表的所有位址"
 
 #: mainunit.strfuture
-msgid "Wow,I never imagined people would use Cheat Engine up to today"
+msgid "Wow,I never imagined people would use Reverie up to today"
 msgstr ""
 
 #: mainunit.strhappybirthday
@@ -5246,8 +5246,8 @@ msgstr "聖誕快樂，新年吉祥"
 
 #: mainunit2.cename
 msgctxt "mainunit2.cename"
-msgid "Cheat Engine 7.2"
-msgstr "Cheat Engine 7.2"
+msgid "Reverie 7.2"
+msgstr "Reverie 7.2"
 
 #: mainunit2.rsdbvmmissedentries
 msgid "Missed %d entries due to a too small buffer or slow copy operation"
@@ -5620,7 +5620,7 @@ msgid "Please specify the new symbol searchpath (; separates paths)"
 msgstr ""
 
 #: memorybrowserformunit.rspleasetargetanotherprocess
-msgid "Start another version of Cheat Engine and attach to that instead"
+msgid "Start another version of Reverie and attach to that instead"
 msgstr ""
 
 #: memorybrowserformunit.rspleasetargetaprocessfirst
@@ -5831,7 +5831,7 @@ msgid "Nothing to scan for"
 msgstr ""
 
 #: memscan.rsmsthescanwasforcedtoterminatesubsequentscansmaynotfunctionproperlyetc
-msgid "The scan was forced to terminate. Subsequent scans may not function properly. It's recommended to restart Cheat Engine"
+msgid "The scan was forced to terminate. Subsequent scans may not function properly. It's recommended to restart Reverie"
 msgstr ""
 
 #: memscan.rsmstupidalignsize
@@ -5960,7 +5960,7 @@ msgid "The lua script in this trainer has some issues and will therefore not loa
 msgstr ""
 
 #: opensave.rsosthereisanewerversionifcheatengineoutetc
-msgid "There is a newer version of Cheat Engine out. It's recommended to use that version instead"
+msgid "There is a newer version of Reverie out. It's recommended to use that version instead"
 msgstr ""
 
 #: opensave.rsosthischeattableiscorrupt
@@ -5997,7 +5997,7 @@ msgid "You can only protect a file if it has an .CETRAINER extension"
 msgstr ""
 
 #: opensave.strcantloadfilepatcher
-msgid "The file patcher can't be loaded by Cheat Engine!"
+msgid "The file patcher can't be loaded by Reverie!"
 msgstr ""
 
 #: opensave.strcantloadprotectedfile
@@ -6009,7 +6009,7 @@ msgid "The icon has been corrupted"
 msgstr ""
 
 #: opensave.strnotacetrainer
-msgid "This is not a trainer made by Cheat Engine (If it is a trainer at all!)"
+msgid "This is not a trainer made by Reverie (If it is a trainer at all!)"
 msgstr ""
 
 #: opensave.strunknowncomponent
@@ -6017,7 +6017,7 @@ msgid "There is a unknown component in the trainer! compnr="
 msgstr ""
 
 #: opensave.strunknowntrainerversion
-msgid "This version of Cheat Engine doesn't know how to read this trainer! Trainerversion="
+msgid "This version of Reverie doesn't know how to read this trainer! Trainerversion="
 msgstr ""
 
 #: parsers.rsinvalidinteger
@@ -7535,7 +7535,7 @@ msgstr ""
 
 #: structuresfrm.rsdoyouwantcheatenginetotryandfillinthemostbasictype
 msgctxt "structuresfrm.rsdoyouwantcheatenginetotryandfillinthemostbasictype"
-msgid "Do you want Cheat Engine to try and fill in the most basic types of the struct using the current address?"
+msgid "Do you want Reverie to try and fill in the most basic types of the struct using the current address?"
 msgstr ""
 
 #: structuresfrm.rsfirstselectastructureyouwanttomodifyordefine
@@ -7664,7 +7664,7 @@ msgstr ""
 
 #: structuresfrm.rswrongversion
 msgctxt "structuresfrm.rswrongversion"
-msgid "This structure file was generated with a newer version of Cheat Engine. (That means there's more than likely a new version so please update....)"
+msgid "This structure file was generated with a newer version of Reverie. (That means there's more than likely a new version so please update....)"
 msgstr ""
 
 #: structuresfrm2.rs2bytewithvalue2
@@ -7732,7 +7732,7 @@ msgstr ""
 
 #: structuresfrm2.rsdoyouwantcheatenginetotryandfillinthemostbasictype
 msgctxt "structuresfrm2.rsdoyouwantcheatenginetotryandfillinthemostbasictype"
-msgid "Do you want Cheat Engine to try and fill in the most basic types of the struct using the current address?"
+msgid "Do you want Reverie to try and fill in the most basic types of the struct using the current address?"
 msgstr ""
 
 #: structuresfrm2.rsfillintheoffsetyouwanttogoto
@@ -8088,7 +8088,7 @@ msgstr ""
 
 #: structuresfrm2.rswrongversion
 msgctxt "structuresfrm2.rswrongversion"
-msgid "This structure file was generated with a newer version of Cheat Engine. (That means there's more than likely a new version so please update....)"
+msgid "This structure file was generated with a newer version of Reverie. (That means there's more than likely a new version so please update....)"
 msgstr ""
 
 #: symbolconfigunit.rsareyousureyouwanttoremoveallsymbolsfromthelist
@@ -8132,7 +8132,7 @@ msgid "You can't change this setting at the moment"
 msgstr "您目前無法修改此設定"
 
 #: tableconverter.rstoooldtable
-msgid "This table is too old to be used. Get Cheat engine 5.6 and open/resave this table"
+msgid "This table is too old to be used. Get Reverie 5.6 and open/resave this table"
 msgstr ""
 
 #: tabout.button1.caption
@@ -8145,17 +8145,17 @@ msgid "Donate"
 msgstr "贊助"
 
 #: tabout.button2.hint
-msgid "If you like Cheat Engine and want to contribute something to the development, just send a donation using Paypal."
-msgstr "如果您喜歡 Cheat Engine，且想為開發作出貢獻，可以透過 Paypal 捐款。"
+msgid "If you like Reverie and want to contribute something to the development, just send a donation using Paypal."
+msgstr "如果您喜歡 Reverie，且想為開發作出貢獻，可以透過 Paypal 捐款。"
 
 #: tabout.caption
-msgid "About Cheat Engine"
-msgstr "關於 Cheat Engine"
+msgid "About Reverie"
+msgstr "關於 Reverie"
 
 #: tabout.groupbox1.caption
 msgctxt "tabout.groupbox1.caption"
-msgid "Cheat Engine"
-msgstr "Cheat Engine"
+msgid "Reverie"
+msgstr "Reverie"
 
 #: tabout.label1.caption
 msgid "Made by: Dark Byte"
@@ -9211,7 +9211,7 @@ msgstr ""
 
 #: tformsettings.aboutlabel.caption
 msgid "About CE"
-msgstr "關於 Cheat Engine"
+msgstr "關於 Reverie"
 
 #: tformsettings.askforreplacewithnops.caption
 msgid "Ask for replace with nop"
@@ -9277,8 +9277,8 @@ msgid "Delete"
 msgstr "刪除"
 
 #: tformsettings.caption
-msgid "Cheat Engine settings"
-msgstr "Cheat Engine 設定"
+msgid "Reverie settings"
+msgstr "Reverie 設定"
 
 #: tformsettings.cballocsaddtowatchedregions.caption
 msgctxt "tformsettings.cballocsaddtowatchedregions.caption"
@@ -9312,7 +9312,7 @@ msgid "Ability to step through kernel code"
 msgstr ""
 
 #: tformsettings.cbcenteronpopup.caption
-msgid "Center Cheat Engine when bringing to front"
+msgid "Center Reverie when bringing to front"
 msgstr ""
 
 #: tformsettings.cbdontopenhandle.caption
@@ -9340,7 +9340,7 @@ msgid "Handle beakpoints not caused by CE"
 msgstr ""
 
 #: tformsettings.cbhideallwindows.caption
-msgid "Hide some/all windows instead of trying to bring cheat engine to front"
+msgid "Hide some/all windows instead of trying to bring Reverie to front"
 msgstr ""
 
 #: tformsettings.cbincremental.caption
@@ -9558,7 +9558,7 @@ msgid "1024"
 msgstr "1024"
 
 #: tformsettings.editfreezeinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before resetting the frozen addresses to their original value."
+msgid "The number of milliseconds that Reverie will wait before resetting the frozen addresses to their original value."
 msgstr ""
 
 #: tformsettings.editfreezeinterval.text
@@ -9567,7 +9567,7 @@ msgid "100"
 msgstr "100"
 
 #: tformsettings.editupdatefoundinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before refreshing the list of found addresses"
+msgid "The number of milliseconds that Reverie will wait before refreshing the list of found addresses"
 msgstr ""
 
 #: tformsettings.editupdatefoundinterval.text
@@ -9576,7 +9576,7 @@ msgid "1000"
 msgstr "1000"
 
 #: tformsettings.editupdateinterval.hint
-msgid "The number of milliseconds that Cheat Engine will wait before refreshing the list of addresses"
+msgid "The number of milliseconds that Reverie will wait before refreshing the list of addresses"
 msgstr ""
 
 #: tformsettings.editupdateinterval.text
@@ -11268,7 +11268,7 @@ msgid "Gigantic"
 msgstr ""
 
 #: tfrmexetrainergenerator.cbgigantic.hint
-msgid "Puts the Cheat Engine executable, dll's and other requirements into the trainer"
+msgid "Puts the Reverie executable, dll's and other requirements into the trainer"
 msgstr ""
 
 #: tfrmexetrainergenerator.cbkerneldebug.caption
@@ -11288,7 +11288,7 @@ msgid "Tiny"
 msgstr ""
 
 #: tfrmexetrainergenerator.cbtiny.hint
-msgid "Only put the trainer data in the trainer. The user must have Cheat Engine installed to run this trainer"
+msgid "Only put the trainer data in the trainer. The user must have Reverie installed to run this trainer"
 msgstr ""
 
 #: tfrmexetrainergenerator.cbvehdebug.caption
@@ -12487,7 +12487,7 @@ msgid ""
 "Compresses the generated .PTR files slightly so they take less space on the disk and less time writing to disk.\n"
 "Most of the time the bottleneck of a pointerscan is disk writing, so it is recommended to use this option.\n"
 "\n"
-"Compressed .PTR files can not be read out by older Cheat Engine versions\n"
+"Compressed .PTR files can not be read out by older Reverie versions\n"
 msgstr ""
 
 #: tfrmpointerscannersettings.cbconnecttonode.caption
@@ -14160,7 +14160,7 @@ msgstr ""
 
 #: tfrmtrainergenerator.cbprotect.hint
 msgid ""
-"Will encrypt the generated cetrainer file and when Cheat Engine loads this file back it will destroy the main form preventing the user from doing anything with it.\n"
+"Will encrypt the generated cetrainer file and when Reverie loads this file back it will destroy the main form preventing the user from doing anything with it.\n"
 "Does not affect the standalone trainer because that one is protected by default\n"
 msgstr ""
 
@@ -14170,7 +14170,7 @@ msgstr "停止播放於"
 
 #: tfrmtrainergenerator.cbsupportcheatengine.caption
 msgctxt "tfrmtrainergenerator.cbsupportcheatengine.caption"
-msgid "Don't support Cheat Engine (or yourself)"
+msgid "Don't support Reverie (or yourself)"
 msgstr ""
 
 #: tfrmtrainergenerator.cbused3dhook.caption
@@ -14227,7 +14227,7 @@ msgid "Output"
 msgstr "輸出"
 
 #: tfrmtrainergenerator.label6.caption
-msgid "Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Cheat Engine trainer"
+msgid "Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Reverie trainer"
 msgstr ""
 
 #: tfrmtrainergenerator.lblactivatesound.caption
@@ -14370,7 +14370,7 @@ msgid "Preemptive flushing"
 msgstr ""
 
 #: tfrmultimap.cbpreemptiveflush.hint
-msgid "When enabled Cheat Engine will flush the data for each cpu instead of only when the buffer is full"
+msgid "When enabled Reverie will flush the data for each cpu instead of only when the buffer is full"
 msgstr ""
 
 #: tfrmultimap.edit1.text
@@ -14533,7 +14533,7 @@ msgstr ""
 
 #: tfrmultimap2.cbdontdeletetracefiles.hint
 msgid ""
-"Normally Cheat Engine will delete the trace files after they have been processed. But if you wish to save them for your own use, check this box\n"
+"Normally Reverie will delete the trace files after they have been processed. But if you wish to save them for your own use, check this box\n"
 "\n"
 "These trace files can grow really big, so make sure you have enough diskspace\n"
 msgstr ""
@@ -15057,8 +15057,8 @@ msgstr ""
 
 #: tmainform.caption
 msgctxt "tmainform.caption"
-msgid "Cheat Engine 7.2"
-msgstr "Cheat Engine 7.2"
+msgid "Reverie 7.2"
+msgstr "Reverie 7.2"
 
 #: tmainform.cbcasesensitive.caption
 msgctxt "TMAINFORM.CBCASESENSITIVE.CAPTION"
@@ -15346,8 +15346,8 @@ msgid "Memory Scan Options"
 msgstr ""
 
 #: tmainform.helpindex1.caption
-msgid "Cheat Engine Help"
-msgstr "Cheat Engine 幫助"
+msgid "Reverie Help"
+msgstr "Reverie 幫助"
 
 #: tmainform.label1.caption
 msgctxt "TMAINFORM.LABEL1.CAPTION"
@@ -15406,12 +15406,12 @@ msgid "Select All"
 msgstr "全選"
 
 #: tmainform.menuitem12.caption
-msgid "Cheat Engine Tutorial (64-Bit)"
-msgstr "Cheat Engine 教學 (64 位元)"
+msgid "Reverie Tutorial (64-Bit)"
+msgstr "Reverie 教學 (64 位元)"
 
 #: tmainform.menuitem15.caption
-msgid "Cheat Engine Tutorial Games"
-msgstr "Cheat Engine 遊戲教學"
+msgid "Reverie Tutorial Games"
+msgstr "Reverie 遊戲教學"
 
 #: tmainform.menuitem2.caption
 msgid "New Item1"
@@ -15748,8 +15748,8 @@ msgid "Table"
 msgstr ""
 
 #: tmainform.mitutorial.caption
-msgid "Cheat Engine Tutorial"
-msgstr "Cheat Engine 教學"
+msgid "Reverie Tutorial"
+msgstr "Reverie 教學"
 
 #: tmainform.miundovalue.caption
 msgctxt "tmainform.miundovalue.caption"
@@ -15813,8 +15813,8 @@ msgid "No Process Selected"
 msgstr "未選擇任何處理程序"
 
 #: tmainform.progressbar.hint
-msgid "This shows how far Cheat Engine is with searching"
-msgstr "這顯示了 Cheat Engine 的掃描進度"
+msgid "This shows how far Reverie is with searching"
+msgstr "這顯示了 Reverie 的掃描進度"
 
 #: tmainform.rbbit.caption
 msgid "Bits"
@@ -16309,7 +16309,7 @@ msgstr "值"
 #: tmemorybrowser.lvstacktracedata.hint
 msgid ""
 "Shows the current stack.\n"
-"Tip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Cheat Engine will guess it for you based on if it's executable memory or not\n"
+"Tip: When doubleclicking the value and it represents an address, then you can hold shift to make it show in the disassembler, and ctrl to make it show in the memory view. Else Reverie will guess it for you based on if it's executable memory or not\n"
 msgstr ""
 
 #: tmemorybrowser.makepagewritable1.caption
@@ -17287,7 +17287,7 @@ msgstr ""
 
 #: trainergenerator.rsdontsupportcheatengineoryourself
 msgctxt "trainergenerator.rsdontsupportcheatengineoryourself"
-msgid "Don't support Cheat Engine (or yourself)"
+msgid "Don't support Reverie (or yourself)"
 msgstr ""
 
 #: trainergenerator.rsdosomethingwith
@@ -17320,7 +17320,7 @@ msgid "The current trainer form does not have a panel named 'CHEATPANEL' so can 
 msgstr ""
 
 #: trainergenerator.rsonclosewarning
-msgid "This form had an onClose event. Good thing this was only a stub, else Cheat Engine would have terminated"
+msgid "This form had an onClose event. Good thing this was only a stub, else Reverie would have terminated"
 msgstr ""
 
 #: trainergenerator.rspleaseselecttypeinaprocessname
@@ -17668,7 +17668,7 @@ msgid "2 Bytes"
 msgstr "2 位元組"
 
 #: vehdebugger.rscheatenginefailedtogetintotheconfig
-msgid "Cheat Engine failed to get into the config of the selected program. (Error=%s)"
+msgid "Reverie failed to get into the config of the selected program. (Error=%s)"
 msgstr ""
 
 #: vehdebugger.rserrorwhiletryingtocreatetheconfigurationstructure
