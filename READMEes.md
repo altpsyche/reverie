@@ -8,9 +8,9 @@ Reverie es un entorno de desarrollo enfocado en el análisis y la modificación 
 Reverie se compila con Lazarus 4.x / FPC 3.2.2 (o posterior) en Windows 10+.
 
   1. Instale Lazarus 4.x con FPC 3.2.2 (compilador cruzado de 32 y 64 bits).
-  2. Abra `Cheat Engine/cheatengine.lpi` en el IDE de Lazarus, o ejecute:
+  2. Abra `Reverie/reverie.lpi` en el IDE de Lazarus, o ejecute:
 
-         lazbuild --build-mode="Release 64-Bit" "Cheat Engine/cheatengine.lpi"
+         lazbuild Reverie/reverie.lpi
 
   3. Opcionalmente, compile los proyectos secundarios que desee utilizar (consulte `README.md` para la lista completa).
 
