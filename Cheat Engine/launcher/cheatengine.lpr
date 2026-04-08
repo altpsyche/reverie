@@ -46,11 +46,7 @@ begin
   exit;
   {$endif}
 
-  {$ifndef altname}
   basename:='cheatengine';
-  {$else}
-  basename:='rt-mod';
-  {$endif}
 
   WindowsKernel:=LoadLibrary('Kernel32.dll'); //there is no kernel33.dll
   IsWow64Process:=   GetProcAddress(WindowsKernel, 'IsWow64Process');
@@ -102,7 +98,7 @@ begin
   else
   begin
     s:=exename;
-    MessageBoxW(0, pwidechar(exename+' could not be found. Please disable/uninstall your anti virus and reinstall Cheat Engine to fix this'),'Cheat Engine launch error',MB_OK or MB_ICONERROR);
+    MessageBoxW(0, pwidechar(exename+' could not be found. Please disable/uninstall your anti virus and reinstall Reverie to fix this'),'Reverie launch error',MB_OK or MB_ICONERROR);
   end;
 
 

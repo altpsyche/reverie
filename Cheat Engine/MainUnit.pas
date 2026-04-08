@@ -8467,16 +8467,10 @@ begin
 
   logo.Width:=settingsbutton.width;
 
-  {$ifdef altname}
-  rname:='IMAGES_ALT_CELOGO';
-  {$else}
   rname:='IMAGES_CELOGO';
-  {$endif}
 
   {$ifdef windows}
-  {$ifndef altname}
   if logo.Width>=90 then
-  {$endif}
   {$endif}
   begin
     rs := TResourceStream.Create(HInstance, rname, RT_RCDATA);

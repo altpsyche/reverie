@@ -72,9 +72,6 @@ var
   currentTranslation: string;
 
 procedure doTranslation;
-{$ifdef altname}
-function altnamer(s: string): string;
-{$endif}
 
 implementation
 
@@ -282,27 +279,6 @@ end;
 var LocalTranslator: TAbstractTranslator;
 
 
-{$ifdef altname}
-type
-  TAltnameTranslator=class(TAbstractTranslator)
-  public
-    procedure TranslateStringProperty(Sender:TObject; const Instance: TPersistent; PropInfo: PPropInfo; var Content:string); override;
-  end;
-
-
-Function altnamerri(Name,Value : AnsiString; Hash : Longint; arg:pointer) : AnsiString;
-begin
-  result:=altnamer(value);
-end;
-
-
-procedure TAltnameTranslator.TranslateStringProperty(Sender:TObject; const Instance: TPersistent; PropInfo: PPropInfo; var Content:string);
-begin
-  Content:=altnamer(content);
-end;
-
-{$endif}
-
 procedure doTranslation;
 var
   Dot1: integer;
@@ -324,12 +300,6 @@ begin
      OutputDebugString('locale filename = '+lcfn);
      {$endif}
 
-     {$ifdef altname}
-     SetResourceStrings(@altnamerri,nil);
-     LRSTranslator:= TAltnameTranslator.create;
-     LocalTranslator:=LRSTranslator;
-//     SetUnitResourceStrings(
-     {$endif}
      if lcfn='' then exit;
 
 
@@ -394,25 +364,6 @@ begin
       freeandnil(LRSTranslator);
   end;
 end;
-
-
-{$ifdef altname}
-function altnamer(s: string): string;
-begin
-  s:=StringReplace(s, 'Cheat Engine','Runtime Modifier',[rfReplaceAll, rfIgnoreCase]);
-  s:=StringReplace(s, 'cheating in','modding',[rfReplaceAll]);
-  s:=StringReplace(s, 'cheating','modding',[rfReplaceAll]);
-  s:=StringReplace(s, 'cheatengine','runtimemodifier',[rfReplaceAll]);
-  s:=StringReplace(s, 'cheat','modification',[rfReplaceAll]);
-  s:=StringReplace(s, 'Tutorial-','rtm-Tutorial-',[rfReplaceAll, rfIgnoreCase]);
-  s:=StringReplace(s, 'Cheat Table','Code Table',[rfReplaceAll]);
-  s:=StringReplace(s, 'CheatTable','Codetable',[rfReplaceAll]);
-
-  s:=StringReplace(s, ' trainer',' mod-tool ',[rfReplaceAll]);
-  s:=StringReplace(s, ' Trainer',' Mod-Tool ',[rfReplaceAll]);
-  exit(s);
-end;
-{$endif}
 
 
 finalization

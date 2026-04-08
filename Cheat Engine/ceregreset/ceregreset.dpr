@@ -18,7 +18,7 @@ uses
   windows,
   registry;
 
-const regname: string={$ifdef altname}'Runtime Modifier'{$else}'Cheat Engine'{$endif};
+const regname: string='Reverie';
 
 
 procedure DeleteFullRegKey(reg: Tregistry; keyname: string);

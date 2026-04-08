@@ -137,11 +137,7 @@ uses
 {$ENDIF}
 
 {$R sounds.res}
-{$ifdef altname}
-{$R Images_alt.res}
-{$else}
 {$R Images.res}
-{$endif}
 
 
 
@@ -290,8 +286,7 @@ var
   noautorun: boolean;
 
 begin
-  Application.Title:='Cheat Engine 7.5';
- //'Cheat Engine 7.3';
+  Application.Title:='Reverie 7.5.1';
   {$ifdef darwin}
   macPortFixRegPath;
   {$endif}
@@ -413,7 +408,7 @@ begin
 
   handleparameters;
 
-  OutputDebugString('Starting CE');
+  OutputDebugString('Starting Reverie');
 
 
   Application.Run;
