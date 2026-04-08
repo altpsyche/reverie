@@ -319,7 +319,6 @@ type
     lblcompareToSavedScan: TLabel;
     miTestAccessViolationThread: TMenuItem;
     miTriggerAccessViolation: TMenuItem;
-    MenuItem16: TMenuItem;
     MenuItem17: TMenuItem;
     MenuItem18: TMenuItem;
     miClearWorkingSet: TMenuItem;
@@ -338,9 +337,7 @@ type
     mfImageList: TImageList;
     lblSigned: TLabel;
     MainMenu2: TMainMenu;
-    miTutorial64: TMenuItem;
     MenuItem14: TMenuItem;
-    MenuItem15: TMenuItem;
     Copyselectedaddresses1: TMenuItem;
     miAutoAssembleErrorMessage: TMenuItem;
     miLuaDocumentation: TMenuItem;
@@ -404,7 +401,6 @@ type
     miShowAsSigned: TMenuItem;
     miOpenFile: TMenuItem;
     MenuItem8: TMenuItem;
-    miTutorial: TMenuItem;
     miLockMouseInGame: TMenuItem;
     miChangeValue: TMenuItem;
     miAddAddress: TMenuItem;
@@ -764,7 +760,6 @@ type
     procedure Process1Click(Sender: TObject);
     procedure miAboutClick(Sender: TObject);
     procedure CreateProcess1Click(Sender: TObject);
-    procedure Helpindex1Click(Sender: TObject);
     procedure New1Click(Sender: TObject);
     procedure File1Click(Sender: TObject);
     procedure actOpenProcesslistExecute(Sender: TObject);
@@ -1299,7 +1294,6 @@ resourcestring
   rsHexadecimal = 'Hexadecimal';
   rsIsNotAValidX = '%s is not a valid xml name';
   rsMUGenerateGroupscanCommand = 'Generate groupscan command';
-  rsTryTutorial = 'Do you want to try out the tutorial?';
   rsUnspecifiedError = 'Unspecified error';
   rsGroupscanDataInvalid = 'groupscan data invalid';
   rsGroupscanResultWithNoGroupscanparser = 'Groupscan result with no groupscanparser';
@@ -3752,8 +3746,13 @@ end;
 
 procedure TMainForm.miTriggerAccessViolationClick(Sender: TObject);
 begin
-  triggerAV(nil);
-  showmessage('Access violation triggered.');
+  try
+    triggerAV(nil);
+    showmessage('Access violation did not trigger (write succeeded).');
+  except
+    on E: Exception do
+      showmessage('Access violation triggered and caught: '+E.ClassName+': '+E.Message);
+  end;
 end;
 
 
@@ -6331,13 +6330,6 @@ begin
   copy1.ShortCut:=TextToShortCut('Meta+C');
   paste1.ShortCut:=TextToShortCut('Meta+V');
   menuitem1.ShortCut:=TextToShortCut('Meta+A');
-
-  miTutorial.Visible:=false;
-  menuitem15.Visible:=false;
-
-
-  if MacIsArm64 then
-    MenuItem16.visible:=true;
 
   cbPresentMemoryOnly.Visible:=false;
   sbClearActiveMemory.visible:=false;
@@ -10952,12 +10944,6 @@ begin
       openprocessepilogue(oldprocessname, oldprocess, oldprocesshandle);
 
   end;
-end;
-
-procedure TMainForm.Helpindex1Click(Sender: TObject);
-begin
-  //Help URL removed - TODO: replace with Reverie docs URL
-//  Application.HelpContext(1);
 end;
 
 procedure TMainForm.New1Click(Sender: TObject);

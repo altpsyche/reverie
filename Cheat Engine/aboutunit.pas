@@ -94,24 +94,12 @@ end;
 
 procedure TAbout.FormCreate(Sender: TObject);
 begin
-
 end;
 
 procedure TAbout.FormShow(Sender: TObject);
-var
-    a,b,c,d: dword;
-    i: integer;
-    rs: TResourceStream;
-    logopic: tpicture;
 begin
   groupbox1.Caption:=cenamewithversion;
-
-
   UpdateDBVMStatus;
-
-
-
-
 end;
 
 

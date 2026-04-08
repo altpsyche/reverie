@@ -128,6 +128,7 @@ var
   oldpenstyle: Tpenstyle;
   oldpenwidth: integer;
   oldpencolor, oldbrushcolor: TColor;
+  oldbrushstyle: TBrushStyle;
   jlThickness: integer;
 
   triangleheight: integer;
@@ -138,6 +139,7 @@ begin
   oldpenwidth:=fcanvas.pen.Width;
   oldpencolor:=fCanvas.Pen.color;
   oldbrushcolor:=fCanvas.Brush.color;
+  oldbrushstyle:=fCanvas.Brush.Style;
 
   fCanvas.Pen.Color:=fjumpcolor;
   fCanvas.Pen.Style:=psDot;
@@ -153,12 +155,14 @@ begin
   begin
     triangleheight:=defaultHeight div 4;
 
-    fCanvas.Brush.Style:=bsSolid; //should be the default, but force it in case something else changed it
+    fCanvas.Brush.Style:=bsSolid; //force solid for the filled triangle
     fCanvas.Brush.Color:=fjumpcolor;
     fCanvas.Polygon([point(fheaders.items[2].Left-triangleheight,yposition-triangleheight),point(fheaders.items[2].Left,yposition),point(fheaders.items[2].Left-triangleheight,yposition+triangleheight)]);
   end;
+  fCanvas.Brush.Style:=oldbrushstyle;
   fCanvas.Brush.Color:=oldbrushcolor;
   fCanvas.Pen.Color:=oldpencolor;
+  fCanvas.Pen.Width:=oldpenwidth;
 
 end;
 

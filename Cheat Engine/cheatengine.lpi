@@ -33,8 +33,66 @@
       <StringTable CompanyName="Cheat Engine" FileDescription="Cheat Engine" ProductVersion="7.5"/>
     </VersionInfo>
     <BuildModes Count="11">
-      <Item1 Name="Release 32-Bit" Default="True"/>
-      <Item2 Name="Release 64-Bit">
+      <Item1 Name="Release 32-Bit">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="bin\cheatengine-i386"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);$(LazarusDir)\ide\include\$(TargetOS);$(LazarusDir)\images;$(LazarusDir)\ideintf\images"/>
+            <OtherUnitFiles Value="VEHDebug;dbk32;lua;jvdesign;$(LazarusDir)\designer;$(LazarusDir)\ide;betterControls"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <Style Value="1"/>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <StripSymbols Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <Verbosity>
+              <ShowNotes Value="False"/>
+              <ShowHints Value="False"/>
+            </Verbosity>
+            <WriteFPCLogo Value="False"/>
+            <CompilerMessages>
+              <IgnoredMessages idx6058="True" idx5066="True" idx5043="True" idx4105="True" idx4104="True" idx3177="True" idx3175="True" idx2005="True"/>
+            </CompilerMessages>
+            <CustomOptions Value="-WB00400000
+-dbenchmarkps
+-dcemain
+-dNDEBUG
+-dDBVMFORAMDISWORKING
+-dNESTEDSTRUCTURES
+-donebytejumps
+-dNoODS"/>
+          </Other>
+        </CompilerOptions>
+      </Item1>
+      <Item2 Name="Release 64-Bit" Default="True">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>

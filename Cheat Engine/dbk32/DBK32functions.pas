@@ -455,9 +455,11 @@ resourcestring
   rsAPCRules = 'APC rules';
   rsPleaseRunThe64BitVersionOfCE = 'Please run the 64-bit version of '+strCheatEngine;
   rsDBKError = 'DBK Error';
-  rsDBKBlockedDueToVulnerableDriverBlocklist = 'Failure starting dbk because '
-    +'the vulnerable driver blocklist is enabled and dbk has been added to it.'
-    +' Want to know how to disable this?';
+  rsDBKBlockedDueToVulnerableDriverBlocklist = 'The DBK driver could not be '
+    +'started because Windows'' Vulnerable Driver Blocklist (HVCI / Memory '
+    +'Integrity) is enabled and has blocked it. To use kernel-mode features, '
+    +'disable Memory Integrity in Windows Security > Device Security > Core '
+    +'Isolation, then reboot.';
 
 var dataloc: widestring;
     applicationPath: widestring;

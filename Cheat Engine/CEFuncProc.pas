@@ -1526,8 +1526,50 @@ end;
 
 var cachedSystemType: integer=-1;
 function GetSystemType: Integer;
+//Returns a coarse OS family integer using the legacy Cheat Engine scheme:
+//  4 = NT4, 5 = Win2000, 6 = WinXP, 7 = Vista or newer (Win7/8/10/11/...)
+//Reverie targets Windows 10+, so this should always return 7 in practice.
+//Detection uses RtlGetVersion (ntdll) because GetVersionEx lies on Win8.1+
+//unless the binary is manifested for the target OS.
+{$IFDEF windows}
+type
+  TRtlGetVersion = function(var info: TOSVersionInfo): LongInt; stdcall;
+var
+  RtlGetVersion: TRtlGetVersion;
+  ver: TOSVersionInfo;
+  ntdll: HMODULE;
+{$ENDIF}
 begin
-  result := 7; // cOsNewer (Vista/7/8/10/11)
+  {$IFDEF windows}
+  if cachedSystemType<>-1 then
+    exit(cachedSystemType);
+
+  result := 7; //safe default for modern Windows
+  ntdll := GetModuleHandle('ntdll.dll');
+  if ntdll<>0 then
+  begin
+    @RtlGetVersion := GetProcAddress(ntdll, 'RtlGetVersion');
+    if Assigned(RtlGetVersion) then
+    begin
+      FillChar(ver, SizeOf(ver), 0);
+      ver.dwOSVersionInfoSize := SizeOf(ver);
+      if RtlGetVersion(ver) = 0 then
+      begin
+        if ver.dwMajorVersion >= 6 then
+          result := 7
+        else if (ver.dwMajorVersion = 5) and (ver.dwMinorVersion >= 1) then
+          result := 6
+        else if (ver.dwMajorVersion = 5) and (ver.dwMinorVersion = 0) then
+          result := 5
+        else
+          result := 4;
+      end;
+    end;
+  end;
+  cachedSystemType := result;
+  {$ELSE}
+  result := 7;
+  {$ENDIF}
 end;
 
 

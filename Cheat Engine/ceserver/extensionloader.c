@@ -628,7 +628,7 @@ int loadExtension(PProcessData p, char *path)
       {
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+0, returnaddress)!=0)
         {
-          debug_log("step1 failed\n");
+          debug_log("injectLibrary(x64->32): failed to write return address at rsp+0\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -636,7 +636,7 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+4, newregs.rsp+0x18)!=0)
         {
-          debug_log("step2 failed\n");
+          debug_log("injectLibrary(x64->32): failed to write path pointer at rsp+4\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -644,7 +644,7 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+8, RTLD_NOW)!=0)
         {
-          debug_log("step3 failed\n");
+          debug_log("injectLibrary(x64->32): failed to write RTLD_NOW at rsp+8\n");
           safe_ptrace(PTRACE_DETACH, pid,0,0);
 
           return FALSE;
@@ -654,7 +654,7 @@ int loadExtension(PProcessData p, char *path)
         {
           if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+12, p->dlopencaller)!=0)
           {
-            debug_log("step4 failed\n");
+            debug_log("injectLibrary(x64->32): failed to write dlopencaller at rsp+12\n");
             safe_ptrace(PTRACE_DETACH, pid,0,0);
 
             return FALSE;
@@ -672,21 +672,21 @@ int loadExtension(PProcessData p, char *path)
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp, returnaddress)!=0)
         {
-          debug_log("Failed to write return address\n");
+          debug_log("injectLibrary(x64): failed to write return address at rsp\n");
           resumeProcess(p, pid);
           return FALSE;
         }
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp-8, returnaddress)!=0)
         {
-          debug_log("step1 failed\n");
+          debug_log("injectLibrary(x64): failed to write return address at rsp-8\n");
           resumeProcess(p, pid);
           return FALSE;
         }
 
         if (ptrace(PTRACE_POKEDATA, pid, newregs.rsp+8, returnaddress)!=0)
         {
-          debug_log("step1 failed\n");
+          debug_log("injectLibrary(x64): failed to write return address at rsp+8\n");
           resumeProcess(p, pid);
           return FALSE;
         }
@@ -747,7 +747,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+0, returnaddress)!=0)
     {
-      debug_log("step1 failed\n");
+      debug_log("injectLibrary(i386): failed to write return address at esp+0\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -755,7 +755,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+4, newregs.esp+16)!=0)
     {
-      debug_log("step2 failed\n");
+      debug_log("injectLibrary(i386): failed to write path pointer at esp+4\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -763,7 +763,7 @@ int loadExtension(PProcessData p, char *path)
 
     if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+8, RTLD_NOW)!=0)
     {
-      debug_log("step3 failed\n");
+      debug_log("injectLibrary(i386): failed to write RTLD_NOW at esp+8\n");
       safe_ptrace(PTRACE_DETACH, pid,0,0);
 
       return FALSE;
@@ -773,7 +773,7 @@ int loadExtension(PProcessData p, char *path)
     {
       if (ptrace(PTRACE_POKEDATA, pid, newregs.esp+12, p->dlopencaller)!=0)
       {
-        debug_log("step4 failed\n");
+        debug_log("injectLibrary(i386): failed to write dlopencaller at esp+12\n");
         safe_ptrace(PTRACE_DETACH, pid,0,0);
 
         return FALSE;

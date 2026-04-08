@@ -2653,32 +2653,12 @@ object MainForm: TMainForm
       object Helpindex1: TMenuItem
         Caption = 'Cheat Engine Help'
         ImageIndex = 18
-        OnClick = Helpindex1Click
+        Visible = False
       end
       object miLuaDocumentation: TMenuItem
         Caption = 'Lua documentation'
         ImageIndex = 10
         OnClick = miLuaDocumentationClick
-      end
-      object miTutorial: TMenuItem
-        Caption = 'Cheat Engine Tutorial'
-        ImageIndex = 23
-        Visible = False
-      end
-      object miTutorial64: TMenuItem
-        Caption = 'Cheat Engine Tutorial (x86_64)'
-        ImageIndex = 24
-        Visible = False
-      end
-      object MenuItem16: TMenuItem
-        Caption = 'Cheat Engine Tutorial (AArch64)'
-        ImageIndex = 24
-        Visible = False
-      end
-      object MenuItem15: TMenuItem
-        Caption = 'Cheat Engine Tutorial Games'
-        ImageIndex = 26
-        Visible = False
       end
       object miEnableLCLDebug: TMenuItem
         AutoCheck = True
