@@ -515,7 +515,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Side = asrBottom
           Left = 8
           Height = 19
-          Hint = 'Will encrypt the generated cetrainer file and when Cheat Engine loads this file back it will destroy the main form preventing the user from doing anything with it.'#13#10'Does not affect the standalone trainer because that one is protected by default'
+          Hint = 'Will encrypt the generated cetrainer file and when Reverie loads this file back it will destroy the main form preventing the user from doing anything with it.'#13#10'Does not affect the standalone trainer because that one is protected by default'
           Top = 154
           Width = 209
           BorderSpacing.Top = 3
@@ -817,7 +817,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       Top = 382
       Width = 493
       Align = alBottom
-      Caption = 'Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Cheat Engine trainer'
+      Caption = 'Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Reverie trainer'
       Layout = tlBottom
       ParentColor = False
       WordWrap = True
@@ -834,7 +834,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
   object CETRAINERSaveDialog: TSaveDialog
     Title = 'Save script as'
     DefaultExt = '.CETRAINER'
-    Filter = 'Cheat Engine Table Trainer (*.CETRAINER)|*.CETRAINER'
+    Filter = 'Reverie Table Trainer (*.CETRAINER)|*.CETRAINER'
     Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Left = 48
     Top = 304
@@ -842,7 +842,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
   object EXESaveDialog: TSaveDialog
     Title = 'Save script as'
     DefaultExt = '.EXE'
-    Filter = 'Cheat Engine EXE Trainer (*.EXE)|*.EXE'
+    Filter = 'Reverie EXE Trainer (*.EXE)|*.EXE'
     Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Left = 48
     Top = 288
@@ -856,7 +856,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
   object CTSaveDialog: TSaveDialog
     Title = 'Save script as'
     DefaultExt = '.CT'
-    Filter = 'Cheat Engine Table (*.CT)|*.CT'
+    Filter = 'Reverie Table (*.CT)|*.CT'
     Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Left = 48
     Top = 272
