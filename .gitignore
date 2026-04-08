@@ -16,6 +16,8 @@ Cheat Engine/macsrc
 *.rsj
 Cheat Engine/cheatengine.lps
 Cheat Engine/cheatengine.res
+Cheat Engine/reverie.lps
+Cheat Engine/reverie.res
 Cheat Engine/MonoDataCollector/.vs/MonoDataCollector/v17/.suo
 Cheat Engine/MonoDataCollector/.vs/MonoDataCollector/v17/Browse.VC.db
 Cheat Engine/MonoDataCollector/.vs/MonoDataCollector/v17/Browse.VC.db-shm

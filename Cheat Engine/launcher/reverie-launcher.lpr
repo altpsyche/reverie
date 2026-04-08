@@ -1,4 +1,4 @@
-program cheatengine;
+program reverielauncher;
 
 {$mode DELPHI}
 
@@ -46,7 +46,7 @@ begin
   exit;
   {$endif}
 
-  basename:='cheatengine';
+  basename:='reverie';
 
   WindowsKernel:=LoadLibrary('Kernel32.dll'); //there is no kernel33.dll
   IsWow64Process:=   GetProcAddress(WindowsKernel, 'IsWow64Process');

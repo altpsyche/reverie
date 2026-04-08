@@ -75,7 +75,7 @@ KmdfLibraryVersion = $KMDFVERSION$
 
 [Strings]
 SPSVCINST_ASSOCSERVICE= 0x00000002
-ManufacturerName="Cheat Engine" ;TODO: Replace with your manufacturer name
+ManufacturerName="Reverie"
 ClassName= "System" ; TODO: edit ClassName
 DiskName = "ultimap2-64 Installation Disk"
 ultimap2-64.DeviceDesc = "ultimap2-64 Device"
