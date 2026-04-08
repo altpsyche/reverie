@@ -50,8 +50,8 @@ build_script:
 # scripts to run after build
 after_build:
   # zip the build archive
-  - tree /F "Cheat Engine\bin"
-  - 7z a Cheat-Engine-%APPVEYOR_REPO_COMMIT%.zip "Cheat Engine\bin"
+  - tree /F "Reverie\bin"
+  - 7z a Reverie-%APPVEYOR_REPO_COMMIT%.zip "Reverie\bin"
 
 #---------------------------------#
 #       tests configuration       #
@@ -66,7 +66,7 @@ test: off
 
 #specify artifacts to upload
 artifacts:
-  - path: Cheat-Engine-%APPVEYOR_REPO_COMMIT%.zip
+  - path: Reverie-%APPVEYOR_REPO_COMMIT%.zip
     name: Cheat-Engine-%APPVEYOR_REPO_COMMIT%  
 
 #---------------------------------#
